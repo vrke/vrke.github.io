@@ -1,0 +1,75 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>Halo2_Lepesek.txt</title>
+    <style type="text/css">
+            /* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+            
+        </style>
+  </head>
+  <body>
+    <hr />
+    <h3>Konfiguráció előtti teendők</h3>
+    <ol>
+      <li>Bekapcsolni az összes eszközt</li>
+      <li>Megvizsgálni, hogy helyén vannak-e a kábelek helyesen.
+Routerek közötti egyenes kábelt lecserélni serial vagy kereszt kábelre.</li>
+      <li>Esetleg egyéb huncutságra kell figyelni.</li>
+    </ol>
+    <hr />
+    <h3>Router konfiguráció lépések</h3>
+    <ol>
+      <li>
+        <em>Console kábellal csatlakozni a routerre egy eszközzel.</em>
+      </li>
+      <li>
+        <em>Terminált nyitni az eszközön</em>
+      </li>
+      <li>
+        <em>Privilegizált módba lépés</em>
+        <code>enable</code>
+      </li>
+      <li>
+        <em>Konfigurációs módba lépés</em>
+        <code>conf t</code>
+      </li>
+      <li>
+        <em>Alap konfiguráció és védelem</em>
+      </li>
+    </ol>
+    <ul>
+      <li>Eszköz név beállítás <code>hostname &lt;KÍVÁNTNÉV&gt;</code></li>
+      <li>Privilegizált mód védelme <code>ena secret &lt;JELSZÓ&gt;</code></li>
+      <li>Konzol port védelme <code>line console 0</code> majd <code>password &lt;JELSZÓ&gt;</code></li>
+    </ul>
+    <ol start="6">
+      <li>
+        <em>Ip-t adni a router egy lábára(interfészére)</em>
+      </li>
+    </ol>
+    <ul>
+      <li>Belépés egy lábra <code>interface serial 0/0/0</code></li>
+      <li>A kívánt ip cím hozzárendelése <code>ip address 10.0.0.1 255.255.255.0</code> ez itt <code>ip ad &lt;Router IP&gt; &lt;MASZK&gt;</code> ként működik.</li>
+      <li>Serial port esetén órajel beállítás <code>clock rate 4000000</code></li>
+      <li>Az interface bekapcsolása <code>no shutdown</code></li>
+      <li>A konfiguráció mentése <code>do write</code> vagy <code>do w</code></li>
+    </ul>
+    <ol start="7">
+      <li>Statikus routing <code>ip route &lt;HÁLÓZAT IP&gt; &lt;MASZK&gt; &lt;Port/IP prefix&gt; &lt;Metrika&gt;</code> pld:  <code>ip route 11.0.0.0 255.255.255.0 serial 0/1</code></li>
+      <li>DHCP</li>
+      <li>NAT/PAT</li>
+    </ol>
+    <hr />
+    <p>Egyéb fontos konfiguráció</p>
+    <ol>
+      <li>DHCP</li>
+      <li>DNS</li>
+    </ol>
+  </body>
+</html>
