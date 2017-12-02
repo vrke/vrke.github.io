@@ -1,0 +1,9 @@
+#bal {
+  display: flex;
+  flex-direction: row;
+} 
+
+#jobb {
+  display: flex;
+  flex-direction: column;
+}
