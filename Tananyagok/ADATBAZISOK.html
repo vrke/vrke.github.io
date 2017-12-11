@@ -1,7 +1,8 @@
-<h1 id="adat-b-1-helper">Adat B 1 helper</h1>
+﻿<h1 id="adat-b-1-helper">Adat B 1 helper</h1>
 
-<p>linkek  <br>
-<a href="http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm">http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm</a></p>
+<p>linkek <br>
+<li><a href="Gyakorlat_05_Megoldas.pdf">Gyakorlat_05_Megoldas.pdf</a></li>
+<li><a href="http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm">http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm</a></p></li>
 
 <ul>
 <li>Az <strong>adatbázis</strong> egy integrált adatrendszer, mely több különböző egyed előfordulásainak adatait adatmodell szerinti struktúrában, perzisztens módon tárolja a kapcsolat leíróelemek mellett a metaadatokkal együtt, melyek a hatékonyság, integritásőrzés, az adatvédelem biztosítását szolgálják. Jelölés : <strong>DB</strong> (database)</li>
@@ -165,6 +166,28 @@ tervezési segédeszköz a relációs adatbázis tervezéséhez  <br>
 <hr>
 
 <ul>
+<li><strong>Anomália</strong> fogalma <br>
+Az anomália az adatbázisban olyan rendellenesség, mely valamely karbantartási műveletnél plusz műveletek beiktatását igényli, ezzel felesleges redundanciát okozva. <br>
+<ul><li><strong>Beszúrási anomália</strong> <br>
+Beszúrási anomáliáról beszélünk abban az esetben, amikor egy adatrekord beszúrása egy másik, hozzá logikailag nem kapcsolódó adatcsoport beszúrását kívánja meg.</li>
+<li><strong>Módosítási anomália</strong> <br>
+Abban az esetben, ha egy relációban egy adat módosítása több helyen történő módosítást igényel, akkor módosítási anomáliáról beszélünk.</li>
+<li><strong>Törlési anomália</strong> <br>
+Amennyiben egy adat törlésével <br>
+másik, hozzá logikailag nem kapcsolódó adatcsoportot is elveszítünk, törlési anomáliáról beszélünk.</li>
+<li>Az anomáliák abból származnak, hogy nem az <br>
+igazán összetartozó adatokat vesszünk be egy <br>
+relációba. </li>
+<li>Hogy mely mezők tartoznak igazán egy relációba, <br>
+azt a mezők közötti összetartozási viszony, a mezők <br>
+közötti függőségek határozzák meg.</li>
+<li>Legfontosabb függőségi típus a funkcionális <br>
+függőség.</li></ul></li>
+</ul>
+
+<hr>
+
+<ul>
 <li><strong>Reláció, séma</strong> <br>
 <ul><li><strong>Reláció</strong>: az azonos szerkezetű rekord előfordulások névvel ellátott halmaza; tárolási egység a relációs adatbázisban. </li>
 <li><strong>Séma</strong>: az adatbázis szerkezeti sémája; az adatbázis elemek, objektumok szerkezetének </li></ul></li>
@@ -185,8 +208,6 @@ szabvány domain-ek: </p>
 Építőelemei: – DOMAIN – MEZŐ – REKORD – RELÁCIÓ – ADATBÁZIS</li>
 </ul>
 
-
-
 <h2 id="definíció">Definíció(?)</h2>
 
 <ul>
@@ -196,3 +217,146 @@ szabvány domain-ek: </p>
 </ul>
 
 <hr>
+
+<img src="kepek/adatb_atalakitas.png" alt="ADATBÁZIS ÁTALAKÍTÁS" height="250" width="760">
+<hr>
+<h2 id="feladatokmegoldások">Feladatok/megoldások</h2>
+
+<p>/* 1. feladat Adjuk meg a 10251, 10255,10259 és 10263 rendelésszámú (OrderID) rendeléseket kezelő <br>
+dolgozó kódját(EmployeeID) és a rendelés dátumát (OrderDate)! */ <br>
+<code>SELECT EmployeeID, OrderDate <br>
+FROM Orders <br>
+WHERE OrderID IN (10251, 10255, 10259, 10263)</code></p>
+
+<p>/*2. feladat Adjuk meg a rendelési tételsorokban (Order Details) szereplő tételek rendelésszámát, <br>
+termékkódját, mennyiségét (Quantity), egységárát (UnitPrice), kedvezményét (Discount) valamint a <br>
+tételsor bruttó és nettó értékét, de csak azoknak a tételsoroknak, ahol kedvezmény jár. <br>
+ */ <br>
+<code>SELECT OrderID, ProductID, Quantity, UnitPrice, Discount, Quantity*UnitPrice AS "Brutto Érték", Quantity*UnitPrice*(1-Discount) AS "Nettó Érték" <br>
+FROM [Order Details] <br>
+WHERE Discount &gt; 0</code></p>
+
+<p>/* 3. feladat Listázzuk ki a dolgozók kódját (EmployeeID) és teljes nevét (LastName és FirstName), <br>
+valamint a születésnapját (születési dátum: BirthDate)! <br>
+ */ <br>
+<code>SELECT EmployeeID, CONCAT(FirstName,' ', LastName) as "Teljes Név", MONTH(BirthDate) as "SzülHónap", DAY(BirthDate) as "SzülNap" <br>
+FROM Employees</code></p>
+
+<p>/* 4. feladat Adjuk meg azoknak a dolgozóknak a kódját és teljes nevét, akiknek a vezetékneve nem az <br>
+A-E betűk valamelyikével kezdődik. <br>
+*/ <br>
+<code>SELECT EmployeeID, CONCAT(FirstName,' ', LastName) as "Teljes Név" <br>
+FROM Employees <br>
+WHERE LastName NOT LIKE '[A-E]%' <br>
+ORDER BY LastName</code></p>
+
+<p>/* 5. 5. feladat Írassuk ki azoknak a dolgozóknak a kódját és teljes nevét, akiknek a vezetéknevében <br>
+legalább két a betű van. */ <br>
+<code>SELECT EmployeeID, CONCAT(FirstName,' ', LastName) as "Teljes Név" <br>
+FROM Employees <br>
+WHERE LastName LIKE '%a%a%' <br>
+ORDER BY LastName</code></p>
+
+<p>/* 6. feladat Adjuk meg azoknak a rendeléseknek az összértékét, ahol a tételsorok értéke nagyobb, mint <br>
+10000$. Rendezzük az eredményt az összérték szerint növekvő sorrendbe. <br>
+ */ <br>
+<code>SELECT OrderID, SUM(Quantity*UnitPrice) as "Összérték" <br>
+FROM [Order Details] <br>
+GROUP BY OrderID  <br>
+HAVING SUM(Quantity * UnitPrice) &gt; 10000 <br>
+ORDER BY Összérték</code></p>
+
+<p>/* 7. feladat Írassuk ki azoknak a termékkategóriáknak (CategoryID) az átlagegységárát, ahol az <br>
+átlagegységár értéke több mint 30$. (Products tábla) */ <br>
+<code>SELECT CategoryID, AVG(UnitPrice) as "Átlagár" <br>
+FROM Products <br>
+GROUP BY CategoryID <br>
+HAVING AVG(UnitPrice) &gt; 30</code></p>
+
+<p>/* 8. feladat Írassuk ki azoknak a termékeknek a kódját és nevét (ProductID és ProductName) <br>
+amelyeknek a készlete (UnitsInStock) több mint az átlagkészlet érték! */ <br>
+<code>SELECT ProductID, ProductName <br>
+FROM Products <br>
+WHERE UnitsInStock &gt; (SELECT AVG(UnitsInStock) FROM Products)</code></p>
+
+<p>/* 9. feladat Írassuk ki azoknak a termékeknek a kódját és nevét (ProductID és ProductName) <br>
+amelyeknek a készlete (UnitsInStock) több mint a saját termékkategóriájuk átlagkészlet értéke! */ <br>
+<code>SELECT p.ProductID, p.ProductName, p.CategoryID, p.UnitsInStock <br>
+FROM Products p <br>
+WHERE p.UnitsInStock &gt; (SELECT AVG(UnitsInStock) FROM Products WHERE CategoryID = p.CategoryID)</code></p>
+
+<p>/*10. feladat Melyik palackcsomagolási egységű termékből rendelték (UnitsOnOrder) a legtöbbet? <br>
+(Products tábla). ( Segítség: ahol a QuantityPerUnit nevében szerepel a bottles szó.) */ <br>
+<code>SELECT ProductName, UnitsOnOrder <br>
+FROM Products <br>
+WHERE QuantityPerUnit LIKE '%bottles%' AND UnitsOnOrder = (SELECT MAX(UnitsOnOrder) FROM Products WHERE QuantityPerUnit LIKE '%bottles%') <br>
+ORDER BY UnitsOnOrder DESC</code></p>
+
+<p>/* 11. feladat Adjuk meg az ügyfél kódját és rendeléseinek számát! (Orders tábla) */ <br>
+<code>SELECT CustomerID, COUNT(*) as "Rendelések Száma" <br>
+FROM Orders <br>
+GROUP BY CustomerID</code></p>
+
+<p>/*Készítsen egy Kategoriák táblát a Northwind adatbázisban. A tábla oszlopai: kategoriakod <br>
+(integer, automatikus számozású legyen), megnevezes (max. 20 karakter), leiras (max 50 <br>
+karakter). A tábla elsődleges kulcsa legyen a kategoriakod. <br>
+Vigyen fel néhány rekordot a táblába INSERT utasítás segítségével! <br>
+Módosítsa a táblát, definiáljon egy indexet a megnevezes mezőre! */ <br>
+CREATE TABLE Kategoriak (KategoriaKod int IDENTITY(1,1) PRIMARY KEY, Megnevezes varchar(20), Leiras varchar(50)) <br>
+<code>GO <br>
+INSERT INTO Kategoriak (Megnevezes, Leiras) VALUES ('Gyümölcsleves', 'Leves gyümölcsből') , <br>
+('Palacsinta', 'Kakaós'), <br>
+('Adatb', 'gyakorlat') <br>
+SELECT * FROM Kategoriak <br>
+CREATE INDEX IND_MEGRENDEL ON Kategoriak(Megnevezes)</code></p>
+
+<p>/*6. Feladat <br>
+Készítsen egy Szallitok táblát a Northwind adatbázisban. Oszlopok: SzallitoKod (egész, <br>
+automatikus számozású, elsődleges kulcs), SzallNev (karakteres, max 20 karakter), <br>
+telefonszám(max 18 karakter). A telefonszám esetén adjunk meg egy megszorítást a <br>
+formátumára vonatkozóan. Formátum (xx) (xx) xxxx-xxx legyen. Ahol az x-ek helyén csak <br>
+0-9 közötti számjegyek lehetnek. Vigyen fel legalább két rekordot INSERT utasítással a <br>
+táblába*/ <br>
+<code>CREATE TABLE Szallitasok (Szallitokod int IDENTITY PRIMARY KEY, SzallNev varchar(20), Telefonszam varchar(18), CONSTRAINT CK_Tel <br>
+CHECK (Telefonszam <br>
+LIKE 'reg_exp_ide')) <br>
+GO</code></p>
+
+<p>/*7. Feladat <br>
+a.)Készítsen egy Termekek táblát a Northwind adatbázisban. Oszlopok: Tkod(egész), <br>
+Tnev(max 15 karakter), egységár (valós), keszlet( valós), kategoria(integer) oszlopokkal. <br>
+Elsődleges kulcs a Tkod. Indexelje a táblát a termék neve szerint is. <br>
+b.)Módosítsa a táblát, vegyen fel egy idegenkulcs hivatkozást a Kategoriák tábla <br>
+kategoriakod mezőjéhez. Adjon megszorítást annak ellenőrzésére, hogy a készlet és az <br>
+egységár nem lehet negatív. Adjon Default 0 értéket a készletre vonatkozóan. Az <br>
+egységárat kötelező kitölteni. <br>
+c.)Töltse fel a táblát adatokkal INSERT utasítás segítségével. <br>
+d.) Törölje a táblát.*/ <br>
+<code>CREATE TABLE Termekek (Tkod int PRIMARY KEY, Tnev varchar(15), Egysegar FLOAT, Keszlet FLOAT, Kategoria INT) <br>
+GO <br>
+CREATE INDEX Megnev_INDX ON Termekek(Tnev) <br>
+GO <br>
+ALTER TABLE Termekek <br>
+ADD CONSTRAINT idegen_kulcs FOREIGN KEY (KategoriaID) REFERENCES Kategoriak (KategoriaID) <br>
+DROP TABLE Termekek <br>
+DROP TABLE Szallitasok <br>
+DROP TABLE Kategoriak</code></p>
+
+<p>/*Feladat. <br>
+Írjon SQL utasítást, amely létrehoz egy Dolgozok táblát az Employees táblából. Bővítse a <br>
+táblát egy Fizetés oszloppal. Adjon meg egy megszorítást, amely nem engedi, hogy egy  <br>
+Adatbázisok I. 11. Gyakorlat <br>
+2016 2 <br>
+Sales Representative (title oszlop) besorolású dolgozó fizetése 1100 USd-nél kisebb, vagy <br>
+2000 USD-nél nagyobb legyen. Vigyen fel adatokat, ellenőrizze, hogy működik e a <br>
+megszorítás*/ <br>
+<code>DROP TABLE Dolgozok <br>
+SELECT * INTO Dolgozok FROM Employees <br>
+ALTER TABLE Dolgozok ADD Fizetes int <br>
+GO <br>
+ALTER TABLE Dolgozok ADD CONSTRAINT FizELL <br>
+CHECK (Title &lt;&gt; 'Sales Representative' --nem sales representative ( != ) <br>
+OR Fizetetes BETWEEN 1100 and 2000 <br>
+AND Title = 'Sales Representative') <br>
+GO <br>
+DROP TABLE Dolgozok</code></p>
