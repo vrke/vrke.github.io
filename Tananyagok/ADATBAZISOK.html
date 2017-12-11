@@ -1,0 +1,198 @@
+<h1 id="adat-b-1-helper">Adat B 1 helper</h1>
+
+<p>linkek  <br>
+<a href="http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm">http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm</a></p>
+
+<ul>
+<li>Az <strong>adatbázis</strong> egy integrált adatrendszer, mely több különböző egyed előfordulásainak adatait adatmodell szerinti struktúrában, perzisztens módon tárolja a kapcsolat leíróelemek mellett a metaadatokkal együtt, melyek a hatékonyság, integritásőrzés, az adatvédelem biztosítását szolgálják. Jelölés : <strong>DB</strong> (database)</li>
+<li>Az <strong>adatbázis-kezelő</strong> rendszer olyan programrendszer, amelynek feladata az adatbázishoz történő szabályozott hozzáférés biztosítása és az adatbázis belső karbantartási műveleteinek végrehajtása.Jele: <strong>DBMS</strong> database management system <br>
+A <strong>DB</strong> csak a <strong>DBMS</strong>-en keresztül érhető el legálisan.</li>
+<li>Az <strong>adatbázis-kezelő rendszer</strong>, az adatbázis és az alkalmazói programok együttesét adatbázis rendszernek nevezzük. Jele: <strong>DBS</strong> (database system)</li>
+</ul>
+
+<hr>
+
+
+
+<h3 id="egyed-kapcsolat-modell"><strong>Egyed Kapcsolat modell</strong></h3>
+
+<p>Entity relationship -&gt;ER Enhanced Entity relationhip -&gt; EER] egyszerűsített szemantikai modell [EK] csak strukturális részt és elemi statikus integritási részt tartalmaz. <br>
+Egyszerű grafikus jelölésrendszer, nem teljes adatmodell, de egyszerűsége révén elterjedt, és ma is széles körben használatos <br>
+tervezési segédeszköz a relációs adatbázis tervezéséhez  <br>
+3 főkomponense van:  <br>
+    - Egyedtípusok (egyedhalmazok) <br>
+    -  kapcsolatok  <br>
+    - Attribútumok(tulajdonságok)</p>
+
+<table>
+<thead>
+<tr>
+  <th>EGYED KAPCSOLAT MODELL RÉSZEI</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><strong>Adatmodell</strong>: matematikai formalizmus, mely a valóság adatorientált leírására alkalmas strukturális rész: a valóságban megtalálható adattípusok és kapcsolataik leírására szolgál    <strong>műveleti rész</strong>: felhasználásával különböző lekérdezési vagy módosítási tevékenységeket végezhetünk  - <strong>integritási rész</strong>: az adatbázisban megvalósuló adattípusokra, adatértékekre és kapcsolatokra, valamint az elvégezhető műveletekre ad megszorítást</td>
+</tr>
+<tr>
+  <td><strong>Egyedtípus</strong>: Az egyedtípusok a modellezni kívánt világ egy-egy közös tulajdonságokkal jellemezhető és egymástól egyértelműen elkülöníthető kisebb csoportjai (halmazai), melyek tartalmazzák a valós előfordulásokat (egyedeket). Az egyedtípusok lehetnek élő vagy élettelen , illetve tárgyi vagy fogalmi jellegű halmazok is. Kérdés: Mire vonatkozó információkat tároljunk a rendszerben?  Típusai:  - <strong>normál</strong> egyed (önmagában azonosítható): dolgozó, autó - <strong>gyenge</strong> egyed (más egyedhez való kapcsolatán keresztül azonosított): dolgozó felesége</td>
+</tr>
+<tr>
+  <td><strong>Attribútum</strong> (Tulajdonság): Az egyedhalmazokhoz attribútumok tartoznak, melyek az egyedek tulajdonságait írják le. Meghatározza az egyed egy részletét. Típusai:    - <strong>normál</strong>: egyértékű dolgozó.szülidő     - <strong>kulcs</strong>: azonosító szerepű dolgozó.TAJszám  - <strong>összetett</strong>: több tagból áll dolgozó.lakcim(irsz,varos)     - <strong>többértékű</strong>: több értéke is lehet dolgozó.hobbi - <strong>származtatott</strong>: értéke kiszámítható dolgozó.életkor</td>
+</tr>
+<tr>
+  <td>Az <strong>egyszerű attribútum</strong> által felvett érték, illetve értékek atomi jellegűek, kisebb egységekre már nem bonthatók. Az <strong>összetett attribútum</strong> további kisebb, általában egyszerű, de elképzelhető, hogy kisebb összetett attribútumokra oszlik. Egyszerű vagy összetett attribútum? a feldolgozási igények szabják meg. A kulcs-attribútum egyértelműen azonosítja az egyedtípus bármely előfordulását, vagyis egy konkrét egyedet különböztet meg a többi egyedtől.</td>
+</tr>
+<tr>
+  <td>A <strong>kapcsolat fokszáma</strong>: megadja, hogy a kapcsolatban hány egyedtípus vesz részt. A következő Termel kapcsolat fokszáma=3</td>
+</tr>
+</tbody></table>
+
+
+<p>(? képek beszúrása ha van idő)</p>
+
+<table>
+<thead>
+<tr>
+  <th>Az EK diagram jelölése:</th>
+  <th></th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><strong>Erős</strong> egyedtípus: téglalap,</td>
+  <td></td>
+</tr>
+<tr>
+  <td><strong>Gyenge</strong> egyedtípus: kettős téglalap,</td>
+  <td></td>
+</tr>
+<tr>
+  <td><strong>Tulajdonságtípus</strong>: ellipszis,</td>
+  <td></td>
+</tr>
+<tr>
+  <td><strong>Azonosító</strong>[kulcs]: aláhúzás,</td>
+  <td></td>
+</tr>
+<tr>
+  <td><strong>Összetett</strong> tulajdonság: A fő tulajdonság ellipsziséhez kapcsolódó ellipszisek.</td>
+  <td></td>
+</tr>
+<tr>
+  <td><strong>Többértékű</strong> tulajdonság: kettős ellipszis,</td>
+  <td></td>
+</tr>
+<tr>
+  <td><strong>Leszármaztatott</strong> tulajdonság: szaggatott vonallal határolt ellipszis,</td>
+  <td></td>
+</tr>
+<tr>
+  <td><strong>Kapcsolat</strong>: rombusz vagy egyenes vonal.</td>
+  <td></td>
+</tr>
+</tbody></table>
+
+
+<ul>
+<li><strong>[FD] Funkcionális függőség (Functional Dependeny)</strong> <br>
+<ul><li>R, A -&gt;R, B </li>
+<li>Egy adott R relációban, egy B tartomány funkcionálisan függ az A tartománytól, ha bármely időpontban, minden egyes A értékhez egyetlen B érték tartozik az adott reláción belül.  </li></ul></li>
+<li>A funkcionális függőség akkor áll fenn, ha egy tulajdonság értékét egy másik tulajdonság értéke egyértelműen meghatározza. </li>
+<li><strong>Tranzitív függőség</strong> <br>
+<ul><li>Tegyük fel, hogy A, B, C az R reláció attribútumai. Ha B funkcionálisan függ A -tól és C funkcionálisan függ B -től, akkor C is funkcionálisan függ A -tól. Ha fordított függőség nem áll fenn, vagyis A nem függ B -től és B nem függ C -től, akkor C tranzitív módon függ A -tól. </li>
+-</ul></li>
+</ul>
+
+<hr>
+
+
+
+<h3 id="normalizálás"><strong>Normalizálás</strong></h3>
+
+<p><em>műveletsorozat a redundanciát okozó FD-k megszüntetésére.</em> <br>
+    1. <strong>Első normálformában</strong> van a relációs séma, ha minden mezője funkcionálisan függ a kulcs mezőcsoporttól és minden mező elemi értéket hordoz. <br>
+    2. <strong>Második normálformában</strong> van a reláció, ha első normálformát teljesíti és ezen felül minden nem kulcs mező a teljes kulcstól függ, de nem függ a kulcs bármely valódi részhalmazától. <br>
+    3. <strong>Harmadik normálformában</strong> van a reláció, ha teljesíti a második normálformát és a nem kulcs mezők közvetlenül, nem tranzitíven, függnek a teljes kulcstól. A tranzitív függőség feloldása szintén a reláció feldarabolásával történik. Ehhez a tranzitív függést külön relációba kiemeljük. <br>
+    4.  <strong>Boyce-Codd normálformában</strong> van a reláció, ha minden függőség csak jelölt kulcsból indul ki. <br>
+    5.  <strong>Többértékű függőség:</strong> Az R(A,B,C) sémán AC többértékű függőség(MVD) teljesül, ha minden (ai, bi) –hez tartozó {ci} halmaz csak ai-től függ, bi-től nem. Minden ai-hez egy {bi} és egy {ci}halmaz rendelhető. Az R{A,B,C}-ban AC többértékű függőség igaz, akkor és csak akkor, ha AB is igaz. <br>
+    6.  <strong>Negyedik normálformában</strong> (4NF) van a reláció, ha minden nem triviális többértékű függőség egyben funkcionális függőség (FD) is, azaz ha AB/C, akkor AB és AC is teljesül. Ekkor a sémában nincs többértékű függőség</p>
+
+<ul>
+<li><strong>Nézet</strong> <br>
+<ul><li>Nézet egy tárolt lekérdezés. Fizikailag nem tárolt adatokat csak egy lekérdező utasítást,  amelyek segítségével fizikai vagy más már létező nézettáblákra hivatkozik.</li>
+<li>Nézetek segítségével a gyakori lekérdezések tárolhatók.</li>
+<li>Egyszerű lekérdezésekből építhet fel bonyolult lekérdezéseket.</li>
+<li>Korlátozhatjuk az adathoz való hozzáférést, mert egynézetben csak a benne hivatkozott adattáblák oszlopait látjuk</li>
+<li>Adatfüggetlenség biztosítható.</li>
+<li>Felhasználása:</li>
+<li>? <code>DROP VIEW &lt;nézet név&gt;</code></li>
+<li>? <code>CREATE VIEW &lt;&gt; (a,b,c) AS SELECT FROM WHERE GROUP BY</code></li></ul></li>
+<li><strong>Kulcs, index definíciója</strong> <br>
+<ul><li><strong>Rekordkulcs</strong>: a rekord előfordulást egyértelműen azonosító mező vagy mezőcsoport; azaz értéke nem ismétlődik és egyetlen egy rekordban sem üres. Fontosabb típusai: elsődleges kulcs, jelölt kulcs, idegen kulcs, szuper kulcs, index kulcs.</li></ul></li>
+</ul>
+
+<p>(? ez a rész ronda/ agyfasz)</p>
+
+<table>
+<thead>
+<tr>
+  <th><strong>Relációs adatmodell</strong></th>
+  <th>A relációs modell fő erősségei:</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>– a modell tiszta elméleti háttéren alapul – egyszerű strukturális rész, mely könnyen implementálható – deklaratív lekérdezési felület, mely könnyen kezelhető – hatékony, egyszerű integritási rész</td>
+  <td>Rugalmas kapcsolati rendszer– Egyszerű struktúra– hatékony lekérdező, kezelő műveleti rész</td>
+</tr>
+<tr>
+  <td>– Nagyfokú logikai függetlenség – egységesség a struktúra és műveleti rész között – halmazorientált műveletek  – egyszerű, elméletileg megalapozott tervezési metodika – a belső optimalizálási modul fontos szereppel bír – Bővíthető (objektum-relációs, multimédia,…)</td>
+  <td></td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+<p><strong>Az Armstrong-axiómák</strong> segítségével a már meglévő függőségekből új függőségek származtathatók. Az Armstrong-axiómák a következők:</p>
+
+<ul>
+<li><strong>Tranzitivitás</strong>: Az egyik legegyszerűbb következtetési szabály azt mondja ki, hogy ha az attribútum-halmazokra teljesülnek az  és  függőségek, akkor teljesül az  függőség is. Ezt a tulajdonságot tranzitivitásnak nevezzük.</li>
+<li><strong>Reflexivitás</strong>  (triviális függőség). Nyilvánvalóan igaz az a szabály is, hogy a  halmaz minden  részhalmazára is teljesül az  függőség.  Ezt nevezzük reflexivitásnak vagy triviális függőségnek.</li>
+<li><strong>Egyesítési</strong> <strong>szabály</strong> azt jelenti, hogy ha teljesül egy  és egy  függőség, akkor teljesül az  függőség is. Szavakkal kifejezve: azonos bal oldalú függőségek jobb oldalán szereplő attribútum-halmazait egyesíthetjük.</li>
+<li><strong>Szétvághatósági</strong> <strong>szabály</strong>. A funkcionális függőség jobb oldalán szereplő attribútum-halmazra teljesül az, hogy annak minden részhalmaza is függ a baloldaltól. Vagyis ha és , akkor is teljesül, és ezt nevezzük szétvághatósági szabálynak.</li>
+<li><strong>Bővítési szabály</strong> azt mondja ki, hogy ha egy funkcionális függés mindkét oldalát ugyanazzal az attribútum-halmazzal bővítjük, akkor a függés továbbra is megmarad a két halmaz között. Formálisan, ha  és tetszőleges attribútum-halmaz, akkor .</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><strong>Reláció, séma</strong> <br>
+<ul><li><strong>Reláció</strong>: az azonos szerkezetű rekord előfordulások névvel ellátott halmaza; tárolási egység a relációs adatbázisban. </li>
+<li><strong>Séma</strong>: az adatbázis szerkezeti sémája; az adatbázis elemek, objektumok szerkezetének </li></ul></li>
+<li><strong>Mező, rekord</strong> <br>
+<ul><li><strong>MEZŐ</strong> jellemzője: – egyértékű – lehet normál vagy kulcs – elnevezés, domain jellemzi – integritási elemek köthetők hozzá – tulajdonságként értelmezhető</li>
+<li><strong>REKORD</strong> jellemzője: – rögzített mezősorrend – szerkezet jellemzi (séma) – -integritási elemek köthetők hozzá</li></ul></li>
+<li><strong>RELÁCIÓ</strong> fogalma: azonos típusú rekordok halmaza - nincs sorrendiség - nincs rekord pozíció - nincs két azonos rekord megadása: - Azonosító név - rekord típus (relációsémája) A reláció előfordulása egy táblázattal szemléltethető.</li>
+<li><p><strong>DOMAIN</strong>: egy fogalomhoz rendelhető értékek rendszere értékhalmaz, mezőtípus, műveletek, operátorok köre <br>
+integritási elvek pl.: életkor értékből nem vonható ki testmagasság érték  <br>
+szabvány domain-ek: </p>
+
+<ul><li>NUMBER(n,m)</li>
+<li>CHAR(n) </li>
+<li>DATE – egyedi domainek</li></ul></li>
+<li><p><em>A relációs modell komponensei</em> <br>
+• relációs adatstruktúra • relációs műveletek • relációs integritási feltételek</p></li>
+<li><em>A relációs modell strukturális része</em> <br>
+Építőelemei: – DOMAIN – MEZŐ – REKORD – RELÁCIÓ – ADATBÁZIS</li>
+</ul>
+
+
+
+<h2 id="definíció">Definíció(?)</h2>
+
+<ul>
+<li><strong>Domain</strong>: értelmezési tartomány, mely megadja az elemhez tartozó értékkészletet, és meghatározza a végrehajtható műveletek körét</li>
+<li><strong>Mező</strong>: az adatbázis struktúra azon egysége, melyből a rekordok felépülnek; a mező rendszerint a legkisebb DB struktúra egység (egyértékű, atomi). A mezők megadásánál meg kell adni a domain-t(típust) és az integritási feltételeket. </li>
+<li><strong>Rekord</strong>: adatbázis struktúra elem, mely a logikailag összetartozó, és egységként kezelhető elemi adatértékek együttesét jelöli. A mezősorrend rögzített (séma), köthetők hozzá integritási feltételek</li>
+</ul>
+
+<hr>
