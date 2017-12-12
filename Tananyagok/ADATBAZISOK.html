@@ -1,4 +1,24 @@
-﻿<h1 id="adat-b-1-helper">Adat B 1 helper</h1>
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  padding: 1rem;
+}
+table {
+    border-collapse: collapse;	
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+	border: 1px solid #999;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<h1 id="adat-b-1-helper">Adat B 1 helper</h1>
 
 <p>linkek <br>
 <li><a href="Gyakorlat_05_Megoldas.pdf">Gyakorlat_05_Megoldas.pdf</a></li>
@@ -149,18 +169,37 @@ tervezési segédeszköz a relációs adatbázis tervezéséhez  <br>
   <td></td>
 </tr>
 </tbody></table>
-
-
+<hr>
+Relációkra vonatkozó műveletek
+Lekérdező nyelvek implementálják őket (pl. SQL)
+A műveletek operandusai relációk
+A műveletek eredményei relációk (nulla sort is tartalmazhat)
+A relációkat halmaznak tekintjük, melynek elemei a reláció sorai
+Halmaz orientált
+Algebrai eszközökkel dolgozik
+Procedurális, műveletekkel adjuk meg mi történjen (hogyan)
+Szelekció - sorok kiválasztása a relációból
+Projekció - oszlopok kiválasztása a relációból
+Descartes szorzat  két reláció kombinációja
+Összekapcsolás (levezethető)
+Különbség
+Unió
+Metszet (levezethető)
+Osztás (levezethető
+<a href='http://www.agt.bme.hu/tantargyak/msc/bmeeoafmt03/BMEEOAFMT03_ea_05.pdf'> PDF A SZAROKHOZ FULLOSAN PDF </a>
 <hr>
 
 <p><strong>Az Armstrong-axiómák</strong> segítségével a már meglévő függőségekből új függőségek származtathatók. Az Armstrong-axiómák a következők:</p>
 
+<img src="http://centroszet.hu/tananyag/adatbazis_alap/9.jpg" alt="ADATBÁZIS ÁTALAKÍTÁS">
+
 <ul>
-<li><strong>Tranzitivitás</strong>: Az egyik legegyszerűbb következtetési szabály azt mondja ki, hogy ha az attribútum-halmazokra teljesülnek az  és  függőségek, akkor teljesül az  függőség is. Ezt a tulajdonságot tranzitivitásnak nevezzük.</li>
-<li><strong>Reflexivitás</strong>  (triviális függőség). Nyilvánvalóan igaz az a szabály is, hogy a  halmaz minden  részhalmazára is teljesül az  függőség.  Ezt nevezzük reflexivitásnak vagy triviális függőségnek.</li>
-<li><strong>Egyesítési</strong> <strong>szabály</strong> azt jelenti, hogy ha teljesül egy  és egy  függőség, akkor teljesül az  függőség is. Szavakkal kifejezve: azonos bal oldalú függőségek jobb oldalán szereplő attribútum-halmazait egyesíthetjük.</li>
-<li><strong>Szétvághatósági</strong> <strong>szabály</strong>. A funkcionális függőség jobb oldalán szereplő attribútum-halmazra teljesül az, hogy annak minden részhalmaza is függ a baloldaltól. Vagyis ha és , akkor is teljesül, és ezt nevezzük szétvághatósági szabálynak.</li>
-<li><strong>Bővítési szabály</strong> azt mondja ki, hogy ha egy funkcionális függés mindkét oldalát ugyanazzal az attribútum-halmazzal bővítjük, akkor a függés továbbra is megmarad a két halmaz között. Formálisan, ha  és tetszőleges attribútum-halmaz, akkor .</li>
+<li><strong>Tranzitivitás</strong>:Ha X→Y és Y→Z, akkor X→Z. Az egyik legegyszerűbb következtetési szabály azt mondja ki, hogy ha az attribútum-halmazokra teljesülnek az  és  függőségek, akkor teljesül az  függőség is. Ezt a tulajdonságot tranzitivitásnak nevezzük.</li>
+<li><strong>Reflexivitás</strong> Ha Y ⊆ X, akkor X→Y. (triviális függőség). Nyilvánvalóan igaz az a szabály is, hogy a  halmaz minden  részhalmazára is teljesül az  függőség.  Ezt nevezzük reflexivitásnak vagy triviális függőségnek.</li>
+<li><strong>Egyesítési</strong> <strong>szabály</strong> F|X→Y és F|X→Z esetén F|X→YZ.azt jelenti, hogy ha teljesül egy  és egy  függőség, akkor teljesül az  függőség is. Szavakkal kifejezve: azonos bal oldalú függőségek jobb oldalán szereplő attribútum-halmazait egyesíthetjük.</li>
+<li><strong>Szétvághatósági/Felbontás/Dekompozíció F|X→Y és Z⊆ Y esetén F|X→Z.</strong> <strong>szabály</strong>. A funkcionális függőség jobb oldalán szereplő attribútum-halmazra teljesül az, hogy annak minden részhalmaza is függ a baloldaltól. Vagyis ha és , akkor is teljesül, és ezt nevezzük szétvághatósági szabálynak.</li>
+<li><strong>Bővítési szabály</strong>Ha X→Y, akkor X U Z → Y U Z. vagy X→Y és tetsz
+őleges Z esetén XZ→YZ. azt mondja ki, hogy ha egy funkcionális függés mindkét oldalát ugyanazzal az attribútum-halmazzal bővítjük, akkor a függés továbbra is megmarad a két halmaz között. Formálisan, ha  és tetszőleges attribútum-halmaz, akkor .</li>
 </ul>
 
 <hr>
@@ -360,3 +399,5 @@ OR Fizetetes BETWEEN 1100 and 2000 <br>
 AND Title = 'Sales Representative') <br>
 GO <br>
 DROP TABLE Dolgozok</code></p>
+
+</body>
