@@ -1,0 +1,90 @@
+﻿<ol>
+<li><p>Igaz/hamis</p>
+<li><a href="jegyzet.pdf">fulljegyzet.pdf</a></li>
+<ul><li>ASC II kódtábla az ékezetes betűket a végére teszi, lista rendezésnél és a végére kerülnek az ékezettel kezdődők</li>
+<li>Csak a tanárnő mániaja, hogy nem szabad a programba adatot beégetni</li>
+<li>a statikus adatoknak nem változhat az értékük a program futása során</li>
+<li>a JDBC annotációkkal kapcsolódik az objektumokhoz</li>
+<li>a .java fájlok neveinek muszáj megegyeznie a tartalmazó osztály nevével</li>
+<li>kivételkezelés csak a programozók szivatására van, adjon meg egy példát is</li>
+<li>események mindig helyetesíthetők kattintással</li>
+<li>osztályoknak mindig van paraméter nélküli konstruktoruk is</li></ul></li>
+<li><p>4 példa, és milyen oop kapcsolat van közöttük <br>
+pl. vizsgasor-ezAFeladat: osztály-példány <br>
+osztály metódus példány </p></li>
+<li><p>Polimorfizmus elve, példával <br>
+Polimorfizmus:A referenciák különbözőtípusúobjektumokra hivatkozhatnak,és a hivatkozott objektumoktólfüggőviselkedést produkálhatnak. <br>
+Sokalakúság (polimorfizmus – polymorphism): Ugyanarra aké relemre a különböző objektumok különböző - képpen reagálnak. (Pl. különböző módon „ beszél() nek ” az állatok – az Allat osztályban definiált beszel() metódust másképpvalósítják meg. A származtatás során az ős osztályok metódusai újra írásnélk ül is képesek legyenek az új, átdefiniált metódusok használat ára.</p></li>
+<li><p>Mi a generikus típus? Mire jó? Példa <br>
+GENERIKUSOK A generikus lehetőséget ad osztályok más típussal való paraméterezésére.Pl.:A generikusan (általánosan) definiált List aktuális típus-paramétere az lehet, hogy a lista milyen konkrét típusúadatokat tartalmazzon–pl. List</p></li>
+<li><p>Starwarsos példa: UML rajzolás: adattagokkal, metódusokkal és feladatival, getter/setterekkel, konstruktorral, 1 ős(karakter) és 2 útód(birodalmi és lázadó)</p></li>
+<li><p>Zenész példa, írja meg rá az interfészt! Zenél(hangszer nem változhat), Fellép, Gyakorol metódusokkal</p></li>
+<li><p>Mi a hiba a kódban? Egy kód részlet:  <br>
+<code>public void Kiir(){ <br>
+try(Scanner scanner = new Scanner(system.In)) <br>
+{ <br>
+system.out(Adja meg a szám értékét!: ); <br>
+int szam = next.Int; <br>
+} <br>
+catch(Exception e) <br>
+}</code> </p></li>
+</ol>
+
+<p>tipp: nem lehet metóduson belül deklarálni</p>
+
+<p>8, Mi a Maven? <br>
+Maven : szoftverprojektek menedzselésére és a build <br>
+folyamat automatizálására használható szoftver. <br>
+ Dependency control, build tool. <br>
+Hasonlít az ant-, gradle-, spring-, roo- ra/re.</p>
+
+<p>9, Példa: egy programot akarunk írni olimpikonok keresésére név, ország, sportág szerint, de jellemzi őket még az érmek száma, és a versenyek száma is. A sportolok.contains(sportolo) feltétellel keresünk a listában, hogyan odlaná meg? Milyen konstruktorokkal? Írja meg a konsturktorokat(elég paraméterrel)!</p>
+
+<p>10, Példa: Azt szeretnénk, hogy kliens oldalon megadott téglalap adatai segítségével szerver oldalon számolja ki a területet. Milyen lépesek lesznek(nem kód), (a TCP protokol szerint?)</p>
+
+<p>11, Mi az egységbezárás elve?  <br>
+Egységbezárás(az információelrejtése): Az objektumokatnem lehet kívülről nem várt módon manipulálni. Csakmeghatározott metódusokon keresztül módosíthatóazállapot.</p>
+
+<p>public double terulet(double sugar){ <br>
+return sugar*sugar*Math.Pi; <br>
+} <br>
+ez sérti-e? ha igen miért? <br>
+12, Mikor használjuk extends-t és mikor az implements-t? Milyen metódusokat írunk meg egyiknál másiknál?</p>
+
+<p>13, Példa: Egyik osztály, Másik osztály, melyik verzió jó az Egyik osztály egy listájának feltöltésére a Másik osztályban, és miért? <br>
+a, egyik.getLista().add(vmi) <br>
+b, egyik.listabaIr(),    listabaIr(int adat){   lista.add(adat); }</p>
+
+<p>14, Milyen tervezési mintákat ismer? Példák! <br>
+Egymásba csúszó konstruktorok  <br>
+MVC (Model-View-Controller) <br>
+Singleton <br>
+Létrehozási <br>
+Builder <br>
+Szerkezeti <br>
+Adapter(illesztő) <br>
+Viselkedési <br>
+Összetevő</p>
+
+<p>A tervezési minták olyan objektum alapú megoldásokat, <br>
+megoldásvázlatokat jelentenek, amelyek már bizonyítottak <br>
+a gyakorlatban, és amelyeket érdemes felhasználni a saját <br>
+tervezés során. </p>
+
+<p>15, Mit kell beállítani, hogy lista elemeit rendezni tudjuk beépített metódusokkal? <br>
+Implementálni a comparable interfacet.</p>
+
+<p>16,private List&lt;&gt; adatok = new ArrayList(); <br>
+    public void getLista(){ <br>
+1,return new unmodifyableList(); <br>
+2,return adatok; <br>
+3,return new CopyOnWriteArrayList(); <br>
+4,return ….. <br>
+} <br>
+Melyik sérti az egységbezárás elvét? Miért? <br>
+Mi a különbség a List&lt;&gt; és az ArrayList között?</p>
+
+<p>17, Hogyan tudunk kapcsolódni a Derby adatbázishoz? <br>
+      Hogyan tudunk ezután átváltani MySQL adatbázisra?</p>
+
+<p>18, Mire emlékszik az első előadásról?</p>
