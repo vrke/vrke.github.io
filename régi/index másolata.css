@@ -1,0 +1,43 @@
+*{
+margin: 0;
+padding: 0;
+}
+html, body{
+	 font-family: 'Open Sans', sans-serif;
+}
+.lec{	
+    overflow: hidden;
+	padding:16px;
+	background-color: green;
+    color: black;  
+	background-color: #e9e9e9;
+	
+}
+#navigationBar {
+    list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	/*background-color: #AAAAAA;*/	
+	
+}
+.lec li{
+	display: inline;
+	padding:10px;
+	/*background-color: #3399ff;*/	
+}
+.lec li a{
+	/*color: white;*/
+	text-decoration: none;	
+	padding:5px;
+	color:black;	
+}
+.lec a.active{	
+	color:orange;
+}
+.lec a:hover {
+	padding-top:15px;
+	padding-bottom:15px;
+    background-color: #b3b3b3;
+	color:white;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vrka.github.io</title>
+    <script src="handlebars-v4.0.11.js"></script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="nav-bar-div" id="nav">
+                <script id="nav-template" type="text/x-handlebars-template">
+                <ul id="nav-bar-ul">
+                   {{{#each elem}}{}
+                    <li><a href={{{href}}}>{{cim}}</a></li>
+                    {{/each}}
+                </ul>
+            </script>
+            </div>
+            <div id="Jegyzetek">
+                <h1>Jegyzetek</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="Tananyagok/Halo2.html">Halo2</a>
+                        </li>
+                        <li>
+                            <a href="Tananyagok/Prog3.html">Prog3.html</a>
+                        </li>
+                        <li>
+                            <a href="Tananyagok/ADATBAZISOK.html">ADATB</a>
+                        </li>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!--  <li><a href="index.html">vrka.github.io</a></li>
+<li><a href="index.html">Jegyzetek</a></li>
+<li><a href="index.html">Az oldalról</a></li> -->
+<script type="text/javascript">
+
+    var navElemek = document.getElementById("nav").innerHTML;
+    var template = Handlebars.compile(navElemek);
+    var elemekAdatok = template
+        (
+        {
+            elem:
+                [
+                    { href: "index.html", cim: "vrka.github.io" },
+                    { href: "index.html", cim: "Jegyzetek" },
+                    { href: "index.html", cim: "Az oldalról" }
+                ]
+        }
+        );
+    document.getElementById("nav").innerHTML += elemekAdatok;
+</script>
+function createNavBar(navBarData){ }
