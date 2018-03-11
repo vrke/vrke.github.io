@@ -6,42 +6,72 @@ html, body{
 	font-family: 'Open Sans', sans-serif;
 }
 .container{	
-	background: orange;
-	padding-top:3px;	
+	background: orange;	
 }
 .nav-div{	
 	background: #e9e9e9;
 	padding-bottom: 15px;
-	padding-top: 14px;
+	padding-top: 15px;
 	padding-left: 4px;
+	
 }
 .nav-div li{	
+
 	display: inline;	
 }
 .nav-div li a{
     padding-left:4px;
 	padding-right:4px;
-	color:black;	
+	color:black;
+	
 }
 #sticky-top-nav a:hover {
-	padding-top:15px;
-	padding-bottom:15px;
+	border-bottom-style: solid;	
+	border-bottom-width: 2px;
+	
+	/*border-left:none; */
+	
+	padding-top:16px;
+	padding-bottom:13px;	
 	padding-left:4px;
 	padding-right:4px;
 	
     background-color: #454545;
 	color:orange;
 }
-#sticky-top-nav li{}
+#sticky-top-nav a{
+	/*
+	color:#A9A9A9;
+	padding-bottom:8px;
+	border-left-style:solid;
+	border-left-width: 2px;
+	border-bottom-style: solid;	
+	border-bottom-width: 2px;
+	*/
+}
+#sticky-top-nav li{
+	
+}
 #sticky-top-nav li a{	
 	list-style-type: none;
 	text-decoration: none;
-	border-bottom-style: solid;
-	border-bottom-width: 0px;
+
 }
 .body-main{
-	background: #ffffff;
+	background: gray;
 }
 #jegyzet-div li a:hover{   
 	color:blue;
+}
+.wrapper {
+    position: absolute;
+    height:100%;
+	width:100%;
+}
+.wrapper iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

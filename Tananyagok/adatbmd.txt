@@ -1,0 +1,443 @@
+# Adat B 1 helper
+
+linkek  
+
+*   [Gyakorlat_05_Megoldas.pdf](Gyakorlat_05_Megoldas.pdf)*   [http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm](http://aries.ektf.hu/~holovacs/AB/3_Relaciok.htm)
+
+*   Az **adatbázis** egy integrált adatrendszer, mely több különböző egyed előfordulásainak adatait adatmodell szerinti struktúrában, perzisztens módon tárolja a kapcsolat leíróelemek mellett a metaadatokkal együtt, melyek a hatékonyság, integritásőrzés, az adatvédelem biztosítását szolgálják. Jelölés : **DB** (database)
+*   Az **adatbázis-kezelő** rendszer olyan programrendszer, amelynek feladata az adatbázishoz történő szabályozott hozzáférés biztosítása és az adatbázis belső karbantartási műveleteinek végrehajtása.Jele: **DBMS** database management system  
+    A **DB** csak a **DBMS**-en keresztül érhető el legálisan.
+*   Az **adatbázis-kezelő rendszer**, az adatbázis és az alkalmazói programok együttesét adatbázis rendszernek nevezzük. Jele: **DBS** (database system)
+
+* * *
+
+### **Egyed Kapcsolat modell**
+
+Entity relationship ->ER Enhanced Entity relationhip -> EER] egyszerűsített szemantikai modell [EK] csak strukturális részt és elemi statikus integritási részt tartalmaz.  
+Egyszerű grafikus jelölésrendszer, nem teljes adatmodell, de egyszerűsége révén elterjedt, és ma is széles körben használatos  
+tervezési segédeszköz a relációs adatbázis tervezéséhez  
+3 főkomponense van:  
+- Egyedtípusok (egyedhalmazok)  
+- kapcsolatok  
+- Attribútumok(tulajdonságok)
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>EGYED KAPCSOLAT MODELL RÉSZEI</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>**Adatmodell**: matematikai formalizmus, mely a valóság adatorientált leírására alkalmas strukturális rész: a valóságban megtalálható adattípusok és kapcsolataik leírására szolgál **műveleti rész**: felhasználásával különböző lekérdezési vagy módosítási tevékenységeket végezhetünk - **integritási rész**: az adatbázisban megvalósuló adattípusokra, adatértékekre és kapcsolatokra, valamint az elvégezhető műveletekre ad megszorítást</td>
+
+</tr>
+
+<tr>
+
+<td>**Egyedtípus**: Az egyedtípusok a modellezni kívánt világ egy-egy közös tulajdonságokkal jellemezhető és egymástól egyértelműen elkülöníthető kisebb csoportjai (halmazai), melyek tartalmazzák a valós előfordulásokat (egyedeket). Az egyedtípusok lehetnek élő vagy élettelen , illetve tárgyi vagy fogalmi jellegű halmazok is. Kérdés: Mire vonatkozó információkat tároljunk a rendszerben? Típusai: - **normál** egyed (önmagában azonosítható): dolgozó, autó - **gyenge** egyed (más egyedhez való kapcsolatán keresztül azonosított): dolgozó felesége</td>
+
+</tr>
+
+<tr>
+
+<td>**Attribútum** (Tulajdonság): Az egyedhalmazokhoz attribútumok tartoznak, melyek az egyedek tulajdonságait írják le. Meghatározza az egyed egy részletét. Típusai: - **normál**: egyértékű dolgozó.szülidő - **kulcs**: azonosító szerepű dolgozó.TAJszám - **összetett**: több tagból áll dolgozó.lakcim(irsz,varos) - **többértékű**: több értéke is lehet dolgozó.hobbi - **származtatott**: értéke kiszámítható dolgozó.életkor</td>
+
+</tr>
+
+<tr>
+
+<td>Az **egyszerű attribútum** által felvett érték, illetve értékek atomi jellegűek, kisebb egységekre már nem bonthatók. Az **összetett attribútum** további kisebb, általában egyszerű, de elképzelhető, hogy kisebb összetett attribútumokra oszlik. Egyszerű vagy összetett attribútum? a feldolgozási igények szabják meg. A kulcs-attribútum egyértelműen azonosítja az egyedtípus bármely előfordulását, vagyis egy konkrét egyedet különböztet meg a többi egyedtől.</td>
+
+</tr>
+
+<tr>
+
+<td>A **kapcsolat fokszáma**: megadja, hogy a kapcsolatban hány egyedtípus vesz részt. A következő Termel kapcsolat fokszáma=3</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+(? képek beszúrása ha van idő)
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Az EK diagram jelölése:</th>
+
+<th></th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>**Erős** egyedtípus: téglalap,</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>**Gyenge** egyedtípus: kettős téglalap,</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>**Tulajdonságtípus**: ellipszis,</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>**Azonosító**[kulcs]: aláhúzás,</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>**Összetett** tulajdonság: A fő tulajdonság ellipsziséhez kapcsolódó ellipszisek.</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>**Többértékű** tulajdonság: kettős ellipszis,</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>**Leszármaztatott** tulajdonság: szaggatott vonallal határolt ellipszis,</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>**Kapcsolat**: rombusz vagy egyenes vonal.</td>
+
+<td></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+*   **[FD] Funkcionális függőség (Functional Dependeny)**  
+
+    *   R, A ->R, B
+    *   Egy adott R relációban, egy B tartomány funkcionálisan függ az A tartománytól, ha bármely időpontban, minden egyes A értékhez egyetlen B érték tartozik az adott reláción belül.
+*   A funkcionális függőség akkor áll fenn, ha egy tulajdonság értékét egy másik tulajdonság értéke egyértelműen meghatározza.
+*   **Tranzitív függőség**  
+
+    *   Tegyük fel, hogy A, B, C az R reláció attribútumai. Ha B funkcionálisan függ A -tól és C funkcionálisan függ B -től, akkor C is funkcionálisan függ A -tól. Ha fordított függőség nem áll fenn, vagyis A nem függ B -től és B nem függ C -től, akkor C tranzitív módon függ A -tól.
+
+* * *
+
+### **Normalizálás**
+
+_műveletsorozat a redundanciát okozó FD-k megszüntetésére._  
+1\. **Első normálformában** van a relációs séma, ha minden mezője funkcionálisan függ a kulcs mezőcsoporttól és minden mező elemi értéket hordoz.  
+2\. **Második normálformában** van a reláció, ha első normálformát teljesíti és ezen felül minden nem kulcs mező a teljes kulcstól függ, de nem függ a kulcs bármely valódi részhalmazától.  
+3\. **Harmadik normálformában** van a reláció, ha teljesíti a második normálformát és a nem kulcs mezők közvetlenül, nem tranzitíven, függnek a teljes kulcstól. A tranzitív függőség feloldása szintén a reláció feldarabolásával történik. Ehhez a tranzitív függést külön relációba kiemeljük.  
+4\. **Boyce-Codd normálformában** van a reláció, ha minden függőség csak jelölt kulcsból indul ki.  
+5\. **Többértékű függőség:** Az R(A,B,C) sémán AC többértékű függőség(MVD) teljesül, ha minden (ai, bi) –hez tartozó {ci} halmaz csak ai-től függ, bi-től nem. Minden ai-hez egy {bi} és egy {ci}halmaz rendelhető. Az R{A,B,C}-ban AC többértékű függőség igaz, akkor és csak akkor, ha AB is igaz.  
+6\. **Negyedik normálformában** (4NF) van a reláció, ha minden nem triviális többértékű függőség egyben funkcionális függőség (FD) is, azaz ha AB/C, akkor AB és AC is teljesül. Ekkor a sémában nincs többértékű függőség
+
+*   **Nézet**  
+
+    *   Nézet egy tárolt lekérdezés. Fizikailag nem tárolt adatokat csak egy lekérdező utasítást, amelyek segítségével fizikai vagy más már létező nézettáblákra hivatkozik.
+    *   Nézetek segítségével a gyakori lekérdezések tárolhatók.
+    *   Egyszerű lekérdezésekből építhet fel bonyolult lekérdezéseket.
+    *   Korlátozhatjuk az adathoz való hozzáférést, mert egynézetben csak a benne hivatkozott adattáblák oszlopait látjuk
+    *   Adatfüggetlenség biztosítható.
+    *   Felhasználása:
+    *   ? `DROP VIEW <nézet név>`
+    *   ? `CREATE VIEW <> (a,b,c) AS SELECT FROM WHERE GROUP BY`
+*   **Kulcs, index definíciója**  
+
+    *   **Rekordkulcs**: a rekord előfordulást egyértelműen azonosító mező vagy mezőcsoport; azaz értéke nem ismétlődik és egyetlen egy rekordban sem üres. Fontosabb típusai: elsődleges kulcs, jelölt kulcs, idegen kulcs, szuper kulcs, index kulcs.
+
+(? ez a rész ronda/ agyfasz)
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>**Relációs adatmodell**</th>
+
+<th>A relációs modell fő erősségei:</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>– a modell tiszta elméleti háttéren alapul – egyszerű strukturális rész, mely könnyen implementálható – deklaratív lekérdezési felület, mely könnyen kezelhető – hatékony, egyszerű integritási rész</td>
+
+<td>Rugalmas kapcsolati rendszer– Egyszerű struktúra– hatékony lekérdező, kezelő műveleti rész</td>
+
+</tr>
+
+<tr>
+
+<td>– Nagyfokú logikai függetlenség – egységesség a struktúra és műveleti rész között – halmazorientált műveletek – egyszerű, elméletileg megalapozott tervezési metodika – a belső optimalizálási modul fontos szereppel bír – Bővíthető (objektum-relációs, multimédia,…)</td>
+
+<td></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+* * *
+
+Relációkra vonatkozó műveletek Lekérdező nyelvek implementálják őket (pl. SQL) A műveletek operandusai relációk A műveletek eredményei relációk (nulla sort is tartalmazhat) A relációkat halmaznak tekintjük, melynek elemei a reláció sorai Halmaz orientált Algebrai eszközökkel dolgozik Procedurális, műveletekkel adjuk meg mi történjen (hogyan) Szelekció - sorok kiválasztása a relációból Projekció - oszlopok kiválasztása a relációból Descartes szorzat két reláció kombinációja Összekapcsolás (levezethető) Különbség Unió Metszet (levezethető) Osztás (levezethető [PDF A SZAROKHOZ FULLOSAN PDF](http://www.agt.bme.hu/tantargyak/msc/bmeeoafmt03/BMEEOAFMT03_ea_05.pdf)
+
+* * *
+
+**Az Armstrong-axiómák** segítségével a már meglévő függőségekből új függőségek származtathatók. Az Armstrong-axiómák a következők:
+
+![ADATBÁZIS ÁTALAKÍTÁS](http://centroszet.hu/tananyag/adatbazis_alap/9.jpg)
+
+*   **Tranzitivitás**:Ha X→Y és Y→Z, akkor X→Z. Az egyik legegyszerűbb következtetési szabály azt mondja ki, hogy ha az attribútum-halmazokra teljesülnek az és függőségek, akkor teljesül az függőség is. Ezt a tulajdonságot tranzitivitásnak nevezzük.
+*   **Reflexivitás** Ha Y ⊆ X, akkor X→Y. (triviális függőség). Nyilvánvalóan igaz az a szabály is, hogy a halmaz minden részhalmazára is teljesül az függőség. Ezt nevezzük reflexivitásnak vagy triviális függőségnek.
+*   **Egyesítési** **szabály** F|X→Y és F|X→Z esetén F|X→YZ.azt jelenti, hogy ha teljesül egy és egy függőség, akkor teljesül az függőség is. Szavakkal kifejezve: azonos bal oldalú függőségek jobb oldalán szereplő attribútum-halmazait egyesíthetjük.
+*   **Szétvághatósági/Felbontás/Dekompozíció F|X→Y és Z⊆ Y esetén F|X→Z.** **szabály**. A funkcionális függőség jobb oldalán szereplő attribútum-halmazra teljesül az, hogy annak minden részhalmaza is függ a baloldaltól. Vagyis ha és , akkor is teljesül, és ezt nevezzük szétvághatósági szabálynak.
+*   **Bővítési szabály**Ha X→Y, akkor X U Z → Y U Z. vagy X→Y és tetsz őleges Z esetén XZ→YZ. azt mondja ki, hogy ha egy funkcionális függés mindkét oldalát ugyanazzal az attribútum-halmazzal bővítjük, akkor a függés továbbra is megmarad a két halmaz között. Formálisan, ha és tetszőleges attribútum-halmaz, akkor .
+
+* * *
+
+*   **Anomália** fogalma  
+    Az anomália az adatbázisban olyan rendellenesség, mely valamely karbantartási műveletnél plusz műveletek beiktatását igényli, ezzel felesleges redundanciát okozva.  
+
+    *   **Beszúrási anomália**  
+        Beszúrási anomáliáról beszélünk abban az esetben, amikor egy adatrekord beszúrása egy másik, hozzá logikailag nem kapcsolódó adatcsoport beszúrását kívánja meg.
+    *   **Módosítási anomália**  
+        Abban az esetben, ha egy relációban egy adat módosítása több helyen történő módosítást igényel, akkor módosítási anomáliáról beszélünk.
+    *   **Törlési anomália**  
+        Amennyiben egy adat törlésével  
+        másik, hozzá logikailag nem kapcsolódó adatcsoportot is elveszítünk, törlési anomáliáról beszélünk.
+    *   Az anomáliák abból származnak, hogy nem az  
+        igazán összetartozó adatokat vesszünk be egy  
+        relációba.
+    *   Hogy mely mezők tartoznak igazán egy relációba,  
+        azt a mezők közötti összetartozási viszony, a mezők  
+        közötti függőségek határozzák meg.
+    *   Legfontosabb függőségi típus a funkcionális  
+        függőség.
+
+* * *
+
+*   **Reláció, séma**  
+
+    *   **Reláció**: az azonos szerkezetű rekord előfordulások névvel ellátott halmaza; tárolási egység a relációs adatbázisban.
+    *   **Séma**: az adatbázis szerkezeti sémája; az adatbázis elemek, objektumok szerkezetének
+*   **Mező, rekord**  
+
+    *   **MEZŐ** jellemzője: – egyértékű – lehet normál vagy kulcs – elnevezés, domain jellemzi – integritási elemek köthetők hozzá – tulajdonságként értelmezhető
+    *   **REKORD** jellemzője: – rögzített mezősorrend – szerkezet jellemzi (séma) – -integritási elemek köthetők hozzá
+*   **RELÁCIÓ** fogalma: azonos típusú rekordok halmaza - nincs sorrendiség - nincs rekord pozíció - nincs két azonos rekord megadása: - Azonosító név - rekord típus (relációsémája) A reláció előfordulása egy táblázattal szemléltethető.
+*   **DOMAIN**: egy fogalomhoz rendelhető értékek rendszere értékhalmaz, mezőtípus, műveletek, operátorok köre  
+    integritási elvek pl.: életkor értékből nem vonható ki testmagasság érték  
+    szabvány domain-ek:
+
+    *   NUMBER(n,m)
+    *   CHAR(n)
+    *   DATE – egyedi domainek
+*   _A relációs modell komponensei_  
+    • relációs adatstruktúra • relációs műveletek • relációs integritási feltételek
+
+*   _A relációs modell strukturális része_  
+    Építőelemei: – DOMAIN – MEZŐ – REKORD – RELÁCIÓ – ADATBÁZIS
+
+## Definíció(?)
+
+*   **Domain**: értelmezési tartomány, mely megadja az elemhez tartozó értékkészletet, és meghatározza a végrehajtható műveletek körét
+*   **Mező**: az adatbázis struktúra azon egysége, melyből a rekordok felépülnek; a mező rendszerint a legkisebb DB struktúra egység (egyértékű, atomi). A mezők megadásánál meg kell adni a domain-t(típust) és az integritási feltételeket.
+*   **Rekord**: adatbázis struktúra elem, mely a logikailag összetartozó, és egységként kezelhető elemi adatértékek együttesét jelöli. A mezősorrend rögzített (séma), köthetők hozzá integritási feltételek
+
+* * *
+
+![ADATBÁZIS ÁTALAKÍTÁS](kepek/adatb_atalakitas.png)
+
+* * *
+
+## Feladatok/megoldások
+
+/* 1\. feladat Adjuk meg a 10251, 10255,10259 és 10263 rendelésszámú (OrderID) rendeléseket kezelő  
+dolgozó kódját(EmployeeID) és a rendelés dátumát (OrderDate)! */  
+`SELECT EmployeeID, OrderDate  
+FROM Orders  
+WHERE OrderID IN (10251, 10255, 10259, 10263)`
+
+/*2\. feladat Adjuk meg a rendelési tételsorokban (Order Details) szereplő tételek rendelésszámát,  
+termékkódját, mennyiségét (Quantity), egységárát (UnitPrice), kedvezményét (Discount) valamint a  
+tételsor bruttó és nettó értékét, de csak azoknak a tételsoroknak, ahol kedvezmény jár.  
+*/  
+`SELECT OrderID, ProductID, Quantity, UnitPrice, Discount, Quantity*UnitPrice AS "Brutto Érték", Quantity*UnitPrice*(1-Discount) AS "Nettó Érték"  
+FROM [Order Details]  
+WHERE Discount > 0`
+
+/* 3\. feladat Listázzuk ki a dolgozók kódját (EmployeeID) és teljes nevét (LastName és FirstName),  
+valamint a születésnapját (születési dátum: BirthDate)!  
+*/  
+`SELECT EmployeeID, CONCAT(FirstName,' ', LastName) as "Teljes Név", MONTH(BirthDate) as "SzülHónap", DAY(BirthDate) as "SzülNap"  
+FROM Employees`
+
+/* 4\. feladat Adjuk meg azoknak a dolgozóknak a kódját és teljes nevét, akiknek a vezetékneve nem az  
+A-E betűk valamelyikével kezdődik.  
+*/  
+`SELECT EmployeeID, CONCAT(FirstName,' ', LastName) as "Teljes Név"  
+FROM Employees  
+WHERE LastName NOT LIKE '[A-E]%'  
+ORDER BY LastName`
+
+/* 5\. 5\. feladat Írassuk ki azoknak a dolgozóknak a kódját és teljes nevét, akiknek a vezetéknevében  
+legalább két a betű van. */  
+`SELECT EmployeeID, CONCAT(FirstName,' ', LastName) as "Teljes Név"  
+FROM Employees  
+WHERE LastName LIKE '%a%a%'  
+ORDER BY LastName`
+
+/* 6\. feladat Adjuk meg azoknak a rendeléseknek az összértékét, ahol a tételsorok értéke nagyobb, mint  
+10000$. Rendezzük az eredményt az összérték szerint növekvő sorrendbe.  
+*/  
+`SELECT OrderID, SUM(Quantity*UnitPrice) as "Összérték"  
+FROM [Order Details]  
+GROUP BY OrderID  
+HAVING SUM(Quantity * UnitPrice) > 10000  
+ORDER BY Összérték`
+
+/* 7\. feladat Írassuk ki azoknak a termékkategóriáknak (CategoryID) az átlagegységárát, ahol az  
+átlagegységár értéke több mint 30$. (Products tábla) */  
+`SELECT CategoryID, AVG(UnitPrice) as "Átlagár"  
+FROM Products  
+GROUP BY CategoryID  
+HAVING AVG(UnitPrice) > 30`
+
+/* 8\. feladat Írassuk ki azoknak a termékeknek a kódját és nevét (ProductID és ProductName)  
+amelyeknek a készlete (UnitsInStock) több mint az átlagkészlet érték! */  
+`SELECT ProductID, ProductName  
+FROM Products  
+WHERE UnitsInStock > (SELECT AVG(UnitsInStock) FROM Products)`
+
+/* 9\. feladat Írassuk ki azoknak a termékeknek a kódját és nevét (ProductID és ProductName)  
+amelyeknek a készlete (UnitsInStock) több mint a saját termékkategóriájuk átlagkészlet értéke! */  
+`SELECT p.ProductID, p.ProductName, p.CategoryID, p.UnitsInStock  
+FROM Products p  
+WHERE p.UnitsInStock > (SELECT AVG(UnitsInStock) FROM Products WHERE CategoryID = p.CategoryID)`
+
+/*10\. feladat Melyik palackcsomagolási egységű termékből rendelték (UnitsOnOrder) a legtöbbet?  
+(Products tábla). ( Segítség: ahol a QuantityPerUnit nevében szerepel a bottles szó.) */  
+`SELECT ProductName, UnitsOnOrder  
+FROM Products  
+WHERE QuantityPerUnit LIKE '%bottles%' AND UnitsOnOrder = (SELECT MAX(UnitsOnOrder) FROM Products WHERE QuantityPerUnit LIKE '%bottles%')  
+ORDER BY UnitsOnOrder DESC`
+
+/* 11\. feladat Adjuk meg az ügyfél kódját és rendeléseinek számát! (Orders tábla) */  
+`SELECT CustomerID, COUNT(*) as "Rendelések Száma"  
+FROM Orders  
+GROUP BY CustomerID`
+
+/*Készítsen egy Kategoriák táblát a Northwind adatbázisban. A tábla oszlopai: kategoriakod  
+(integer, automatikus számozású legyen), megnevezes (max. 20 karakter), leiras (max 50  
+karakter). A tábla elsődleges kulcsa legyen a kategoriakod.  
+Vigyen fel néhány rekordot a táblába INSERT utasítás segítségével!  
+Módosítsa a táblát, definiáljon egy indexet a megnevezes mezőre! */  
+CREATE TABLE Kategoriak (KategoriaKod int IDENTITY(1,1) PRIMARY KEY, Megnevezes varchar(20), Leiras varchar(50))  
+`GO  
+INSERT INTO Kategoriak (Megnevezes, Leiras) VALUES ('Gyümölcsleves', 'Leves gyümölcsből') ,  
+('Palacsinta', 'Kakaós'),  
+('Adatb', 'gyakorlat')  
+SELECT * FROM Kategoriak  
+CREATE INDEX IND_MEGRENDEL ON Kategoriak(Megnevezes)`
+
+/*6\. Feladat  
+Készítsen egy Szallitok táblát a Northwind adatbázisban. Oszlopok: SzallitoKod (egész,  
+automatikus számozású, elsődleges kulcs), SzallNev (karakteres, max 20 karakter),  
+telefonszám(max 18 karakter). A telefonszám esetén adjunk meg egy megszorítást a  
+formátumára vonatkozóan. Formátum (xx) (xx) xxxx-xxx legyen. Ahol az x-ek helyén csak  
+0-9 közötti számjegyek lehetnek. Vigyen fel legalább két rekordot INSERT utasítással a  
+táblába*/  
+`CREATE TABLE Szallitasok (Szallitokod int IDENTITY PRIMARY KEY, SzallNev varchar(20), Telefonszam varchar(18), CONSTRAINT CK_Tel  
+CHECK (Telefonszam  
+LIKE 'reg_exp_ide'))  
+GO`
+
+/*7\. Feladat  
+a.)Készítsen egy Termekek táblát a Northwind adatbázisban. Oszlopok: Tkod(egész),  
+Tnev(max 15 karakter), egységár (valós), keszlet( valós), kategoria(integer) oszlopokkal.  
+Elsődleges kulcs a Tkod. Indexelje a táblát a termék neve szerint is.  
+b.)Módosítsa a táblát, vegyen fel egy idegenkulcs hivatkozást a Kategoriák tábla  
+kategoriakod mezőjéhez. Adjon megszorítást annak ellenőrzésére, hogy a készlet és az  
+egységár nem lehet negatív. Adjon Default 0 értéket a készletre vonatkozóan. Az  
+egységárat kötelező kitölteni.  
+c.)Töltse fel a táblát adatokkal INSERT utasítás segítségével.  
+d.) Törölje a táblát.*/  
+`CREATE TABLE Termekek (Tkod int PRIMARY KEY, Tnev varchar(15), Egysegar FLOAT, Keszlet FLOAT, Kategoria INT)  
+GO  
+CREATE INDEX Megnev_INDX ON Termekek(Tnev)  
+GO  
+ALTER TABLE Termekek  
+ADD CONSTRAINT idegen_kulcs FOREIGN KEY (KategoriaID) REFERENCES Kategoriak (KategoriaID)  
+DROP TABLE Termekek  
+DROP TABLE Szallitasok  
+DROP TABLE Kategoriak`
+
+/*Feladat.  
+Írjon SQL utasítást, amely létrehoz egy Dolgozok táblát az Employees táblából. Bővítse a  
+táblát egy Fizetés oszloppal. Adjon meg egy megszorítást, amely nem engedi, hogy egy  
+Adatbázisok I. 11\. Gyakorlat  
+2016 2  
+Sales Representative (title oszlop) besorolású dolgozó fizetése 1100 USd-nél kisebb, vagy  
+2000 USD-nél nagyobb legyen. Vigyen fel adatokat, ellenőrizze, hogy működik e a  
+megszorítás*/  
+`DROP TABLE Dolgozok  
+SELECT * INTO Dolgozok FROM Employees  
+ALTER TABLE Dolgozok ADD Fizetes int  
+GO  
+ALTER TABLE Dolgozok ADD CONSTRAINT FizELL  
+CHECK (Title <> 'Sales Representative' --nem sales representative ( != )  
+OR Fizetetes BETWEEN 1100 and 2000  
+AND Title = 'Sales Representative')  
+GO  
+DROP TABLE Dolgozok`
