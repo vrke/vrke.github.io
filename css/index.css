@@ -42,7 +42,7 @@ html, body{}
 }
 .body-main{
     position: null;
-    padding-top: 50px;
+    padding-top: 3%;
 	background: gray;
 }
 #jegyzet-div li a:hover{   
@@ -50,7 +50,7 @@ html, body{}
 }
 .wrapper {
     position: absolute;
-    height:100%;
+    height:80%;
 	width:100%;
 }
 .wrapper iframe {
@@ -59,4 +59,5 @@ html, body{}
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }

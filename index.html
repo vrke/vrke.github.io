@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-        <div class="container">
-            <div class="nav-div" id="sticky-top-nav">
+    <div class="nav-div" id="sticky-top-nav">
                 <ul id="nav-ul">
                     <li>
                         <a class="active" href="index.html">vrka.github.io</a>
@@ -20,6 +19,8 @@
                     </li>
                 </ul>
             </div>
+        <div class="container">
+            
 			<div class="body-div">
 			<div class="body-main" id="jegyzet-div">            
                 <h1>Jegyzetek</h1>
@@ -34,6 +35,9 @@
                         <li>
                             <a href="Tananyagok/ADATBAZISOK.html">ADATB</a>
                         </li>
+                        <li>
+                            <a href="https://docs.google.com/document/d/e/2PACX-1vTvzTnpsUcQFtQ-rWnEZ2bsZ_sb4YyME3ESFHKTuDfAI-7AqLftGM1Low-7mAXeqRoHvEeNzVZAQIMG/pub?embedded=true">Új Adatb</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -43,7 +47,7 @@
 
 			
 	 <div class="wrapper"> 
-         <iframe src="Tananyagok/Halo2.html"></iframe>	
+        
   <iframe src="https://docs.google.com/document/d/e/2PACX-1vTvzTnpsUcQFtQ-rWnEZ2bsZ_sb4YyME3ESFHKTuDfAI-7AqLftGM1Low-7mAXeqRoHvEeNzVZAQIMG/pub?embedded=true"></iframe>		
     </div>
 
@@ -61,6 +65,27 @@ function myFunction() {
   }
 }
 </script>
+    <script type="text/javascript">
+
+function pagebar()
+{
+	var links=document.getElementById('navbar').getElementsByTagName("a");
+	var current = location.href;
+
+	for (var i=0; i < links.length; i++)
+	{
+		if(links[i].href == current) 
+		{
+			links[i].href = "";
+			links[i].className='grayStyle';
+		}
+	}
+}
+
+window.onload = pagebar;
+
+</script>
+
 </body>
 
 </html>
