@@ -9,6 +9,7 @@
   - Matek : [Mateking](https://www.mateking.hu) jó forrás gyakorláshoz
     - [Differenciálhatóság (Mateking)](https://www.mateking.hu/system/files/docs/differencialhatosag.pdf)
   - Dokumentum
+    - [Latex kép generátor](http://www.codecogs.com/latex/eqneditor.php)
     - [Katex syntax](https://khan.github.io/KaTeX/function-support.html)
     - [MarkDown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - Egyéb
