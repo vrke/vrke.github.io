@@ -9,7 +9,6 @@
   - Matek : [Mateking](https://www.mateking.hu) jó forrás gyakorláshoz
     - [Differenciálhatóság (Mateking)](https://www.mateking.hu/system/files/docs/differencialhatosag.pdf)
   - Dokumentum
-    - [Latex kép generátor](http://www.codecogs.com/latex/eqneditor.php)
     - [Katex syntax](https://khan.github.io/KaTeX/function-support.html)
     - [MarkDown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - Egyéb
@@ -21,6 +20,13 @@
 ## Trükkök
 
 1. $\dfrac{1}{x^2} = x^{-2}$
+
+## Szabályok
+
+1. Logaritmus cucc
+    - $logab = c$ ami nem más mint $b = c^a
+2. trignonmertikus izé
+    - sin 0 = 0 cos 0 = 1
 
 ## Feladatok
 
@@ -37,15 +43,17 @@
             - $-\blue c$ invertálás y tengelyen (pl jelen esetben a x/2 fv alapból / lenne de megfordul \ irányban)
             - $-\textcolor{lime} x$ invertálás x tengelyen
     - A fenti szabályok segítségével fel kell rajzolni az alapfüggvényt (amit behelyettesítünk) majd rá az érintőt.
-
 2. Határozza meg az $f(x)=x\cdot e^x$ függvény monotonitási intervallumait és szélsőértékeit!
     - [A példa monotonitási intervalluma](https://www.youtube.com/watch?v=7cwN7Os8tf4) egy másfajta [megoldás](https://www.youtube.com/watch?v=xaLubQigeiA&t=577s)
     - A monotonitás és szélsőértékekre segítség a megoldáshoz [itt](https://www.mateking.hu/analizis-1/fuggvenyvizsgalat-gazdasagi-feladatok/a-fuggvenyvizsgalat-lepesei)
 3. Számítsa ki a következő határértékeket:
     - Figyelni kell mert lehet $\dfrac {0}{0}$ vagy $\dfrac{\infty}{\infty}$ alakú határ érték aminél mindenképpen a L'Hospital szabályt kell alkalmazni.
-
+    - [Online határérték kalkulátor](https://www.symbolab.com/solver/limit-calculator/%5Clim_%7Bx%5Cto-1%20%7D%5Cleft(%5Cfrac%7B3x-1%7D%7Bx%5E%7B2%7D%2B2x%2B1%7D%5Cright)) 
+        - \lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)
 4. Deriválja az alábbi függvényeket:
     - https://www.derivative-calculator.net/
         - (5log_3 x- root(3,x))/3^x
         - 3/root(3,x)-5/root(5,x^3)
+        - (3+2x^2)^10
+        - ((3x^3-4)/(2x^2+2x))^2
     - s
