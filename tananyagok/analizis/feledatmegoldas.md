@@ -19,14 +19,21 @@
 
 ## Trükkök
 
-1. $\dfrac{1}{x^2} = x^{-2}$
+1. $\dfrac{1}{x} = x^{-1}$
+2. $\sqrt {x} = x^{\frac{1}{2}}$
 
 ## Szabályok
 
 1. Logaritmus cucc
-    - $logab = c$ ami nem más mint $b = c^a
+    - $log_ab = c$ ami nem más mint $b = c^a$
 2. trignonmertikus izé
     - sin 0 = 0 cos 0 = 1
+3. deriválás
+    - Lánc szabály
+        - $(f\circ g)'(x_0) = (f'\circ  g)\cdot g' = f'g(x_0) \cdot g'(x_0)$
+        - $(f\circ g \circ h)'(x_0) =(f'\circ g\circ h)\cdot(g'\circ h)\cdot'h= (f'gh)(x_0)\cdot(g'h)(x_0)\cdot'h(x_0)$
+4. monotonitás
+   - $a_{n+1} - a_n$ Egyszerű ~$\frac {n+1}{n-1}$ alakúnál lehet használni
 
 ## Feladatok
 
@@ -46,12 +53,15 @@
 2. Határozza meg az $f(x)=x\cdot e^x$ függvény monotonitási intervallumait és szélsőértékeit!
     - [A példa monotonitási intervalluma](https://www.youtube.com/watch?v=7cwN7Os8tf4) egy másfajta [megoldás](https://www.youtube.com/watch?v=xaLubQigeiA&t=577s)
     - A monotonitás és szélsőértékekre segítség a megoldáshoz [itt](https://www.mateking.hu/analizis-1/fuggvenyvizsgalat-gazdasagi-feladatok/a-fuggvenyvizsgalat-lepesei)
+    
 3. Számítsa ki a következő határértékeket:
     - Figyelni kell mert lehet $\dfrac {0}{0}$ vagy $\dfrac{\infty}{\infty}$ alakú határ érték aminél mindenképpen a L'Hospital szabályt kell alkalmazni.
-    - [Online határérték kalkulátor](https://www.symbolab.com/solver/limit-calculator/%5Clim_%7Bx%5Cto-1%20%7D%5Cleft(%5Cfrac%7B3x-1%7D%7Bx%5E%7B2%7D%2B2x%2B1%7D%5Cright)) 
-        - \lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)
+    - [Online határérték kalkulátor](https://www.symbolab.com/solver/limit-calculator/)
+        - $\lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)$ \lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)
+        - $\lim _{x\to 2}\left(3x+4\right)^4$ \lim _{x\to 2}\left(3x+4\right)^4
+        - .
 4. Deriválja az alábbi függvényeket:
-    - https://www.derivative-calculator.net/
+    - [Derivált kalkulátor](https://www.derivative-calculator.net/)
         - (5log_3 x- root(3,x))/3^x
         - 3/root(3,x)-5/root(5,x^3)
         - (3+2x^2)^10
