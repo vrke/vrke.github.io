@@ -25,9 +25,9 @@
 ## Szabályok
 
 1. Logaritmus cucc
-    - $log_ab = c$ ami nem más mint $b = c^a$
+    - $log_a b = c$ ami nem más mint $b = c^a$
 2. trignonmertikus izé
-    - sin 0 = 0 cos 0 = 1
+    - $sin 0 = 0$ és `cos 0 = 1`
 3. deriválás
     - Lánc szabály
         - $(f\circ g)'(x_0) = (f'\circ  g)\cdot g' = f'g(x_0) \cdot g'(x_0)$
@@ -66,4 +66,5 @@
         - 3/root(3,x)-5/root(5,x^3)
         - (3+2x^2)^10
         - ((3x^3-4)/(2x^2+2x))^2
+        - 3/x^(1/3)
     - s

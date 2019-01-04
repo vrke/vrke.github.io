@@ -115,7 +115,7 @@ Speciálisan: `RxR = R^2  RxRxR = R^3`
 
 ### Ábrázolás
 
-: 1.  a komplex számokat komplex számsíkon -- Gauss-féle számsíkon --  ábrázoljuk. Az x-tengelyt valós, az y-tengelyt képzetes tengelynek nevezük.
+1. a komplex számokat komplex számsíkon -- Gauss-féle számsíkon --  ábrázoljuk. Az x-tengelyt valós, az y-tengelyt képzetes tengelynek nevezük.
 2. `z = a+b*i` a komplex számnak a sík P(a;b) pontjai vagy az OP(origo, p pont) helyvektor felel meg.
 
 ### Konjugált
@@ -233,18 +233,15 @@ Leképezések osztályozása:
 
 ### Konvexitás
 
- Az f függvény az [a,b] intervallumon alulról konvex [konkáv] ,ha bármely ívének minden
-pontja az ív végpontjait összekötő húr alatt [felett] van.
+ Az f függvény az [a,b] intervallumon alulról konvex [konkáv] ,ha bármely ívének minden pontja az ív végpontjait összekötő húr alatt [felett] van.
 
 ### Inflexiós pont
 
- azt a pontot ,amelyben két különböző konvexitású görbedarab
-csatlakozik,inflexiós pontnak nevezzük.
+ Azt a pontot, amelyben két különböző konvexitású görbedarab csatlakozik, inflexiós pontnak nevezzük.
 
 ### Periodocitás
 
- Az f függvény periodikus ,ha létezik olyan p &gt; 0 valós szám ,hoghy minden x-re ,ahol f
-értelmezett f(x+p)=f(x) teljesül.A legkisebb ilyen p-t az f függvény periódusnak nevezzük.
+ Az f függvény periodikus ,ha létezik olyan p &gt; 0 valós szám ,hoghy minden x-re ,ahol f értelmezett f(x+p)=f(x) teljesül.A legkisebb ilyen p-t az f függvény periódusnak nevezzük.
 
 ### Elemi függvények osztályozása
 
@@ -260,16 +257,13 @@ csatlakozik,inflexiós pontnak nevezzük.
 
 ### Függvények leszűkitése
 
-Legyen az a halmaz az f fv ÉT jének nem üres részhalmaza az f fv A halmazra való leszűkítése alatt azt az fvt értjük amelynek az ÉTja A és értékkészlete minden x0
+Legyen az A halmaz az (f) fv Értelmezési Tartományának nem üres részhalmaza az f fv A halmazra való leszűkítése alatt azt az fvt értjük amelynek az ÉTja A és értékkészlete minden x0
 
 ### Összetett fvk leképezése
 
 ### Inverz fv
 
-:  Legyen az f fgv kölcsönösen egyértelmű leképezéssel létesült fgv. Az f fgv invesz fgv-én azt
-az f fgv-t értjük amelynek értelmezési tartómánya az f fgv értékészlete és hozzá rendelési
-törvény a következő ,minden y-hoz azt a x-t rendeli ,amelyből az eredeti leképezés során az az
-y keletkezett azaz amelyre y=f(x).
+Legyen az f fgv kölcsönösen egyértelmű leképezéssel létesült fgv. Az f fgv invesz fgv-én azt az f fgv-t értjük amelynek értelmezési tartómánya az f fgv értékészlete és hozzá rendelési törvény a következő ,minden y-hoz azt a x-t rendeli ,amelyből az eredeti leképezés során az az y keletkezett azaz amelyre y=f(x).
 
 ### Elemi fv
 
@@ -277,23 +271,21 @@ y keletkezett azaz amelyre y=f(x).
 
 ## Ciklometrikus fvk
 
-Mivel minden trigonometrikus fgv több-egyértelmű leképezéssel keletkezett ezért az inverzük nem fgv. Azonban ha ezen fgv-ek mindegyikét olyan intervallumra szűkítjuk le, amelyen  kölcsönösen egyértelmű , akkor a trigonometrikus fgv-ek inverzeiőről is beszélunk.
+Mivel minden trigonometrikus fgv több-egyértelmű leképezéssel keletkezett ezért az inverzük nem fgv. Azonban ha ezen fgv-ek mindegyikét olyan intervallumra szűkítjuk le,amelyen  kölcsönösen egyértelmű , akkor a trigonometrikus fgv-ek inverzeiőről is beszélunk.
 
 ### sin
 
-f(x) = sinx Dsz = [-pi/2; pi/2] ezen az intervallumon a sin x szig mon növő ebből következik hogy e-e leképezés -> létezik és véges
-Df={x| x eleme R} t-e -> nem létezik -> Dsz = [-pi/2; pi/2] -> e-e -> létezik  Rf [-1;1]
-y = sin x
-arcisn y = arcsin (sinx) = x = inverz f(y) -> inverz f(x) = y = arcsin x Df=[-1;1] Rf = [-pi/2; pi/2]
-Hozzárendelési utasítás : arcsin azt jelenti hogy a  [-pi/2; pi/2] zért intervallumba eső zárt szöget radiánban adva menyek a sinusa =x
+- f(x) = sinx Dsz = [-pi/2; pi/2] ezen az intervallumon a sin x szig mon növő ebből következik hogy e-e leképezés -> létezik és véges
+- Df={x| x eleme R} t-e -> nem létezik -> Dsz = [-pi/2; pi/2] -> e-e -> létezik  Rf [-1;1] y = sin x arcisn y = arcsin (sinx) = x = inverz f(y) -> inverz f(x) = y = arcsin x Df=[-1;1] Rf = [-pi/2; pi/2]
+- Hozzárendelési utasítás : arcsin azt jelenti hogy a  [-pi/2; pi/2] zért intervallumba eső zárt szöget radiánban adva menyek a sinusa =x
 
 ### cos
 
-f(x) = cosx Dsz = [0; pi] ezen az intervallumon a cos x szig mon csökken ebből következik hogy e-e leképezés -> létezik és véges
-Df={x| x eleme R} t-e -> nem létezik -> Dsz = [0; pi] -> e-e -> létezik  Rf [-1;1]
-y = cos x
-arcisn y = arccos (cosx) = x = inverz f(y) -> inverz f(x) = y = arccos x Df=[-1;1] Rf = [-pi/2; pi/2]
-Hozzárendelési utasítás : arccos azt jelenti hogy a  [0; pi] zért intervallumba eső zárt szöget radiánban adva menyek a cosinusa =x
+- f(x) = cosx Dsz = [0; pi] ezen az intervallumon a cos x szig mon csökken ebből következik hogy e-e leképezés -> létezik és véges
+- `Df={x| x eleme R}` t-e -> nem létezik -> Dsz = [0; pi] -> e-e -> létezik  Rf [-1;1]
+- `y = cos x`
+- `arcisn y = arccos (cosx)` = x = inverz f(y) -> inverz f(x) = y = arccos x Df=[-1;1] Rf = [-pi/2; pi/2]
+- Hozzárendelési utasítás : arccos azt jelenti hogy a  [0; pi] zért intervallumba eső zárt szöget radiánban adva menyek a cosinusa =x
 
 ### tan
 
@@ -450,7 +442,7 @@ an
 
 ### Műveletek folytonos függvényekkel
 
-- Ha az f és g folytonos x0 helyen akkor az f+g, f*g, f/g (ha g =/= 0) függvények is folytonossak x0 helyen
+- Ha az f és g folytonos x0 helyen akkor az f+g, f*g, f/g (ha g =/= 0) függvények is folytonosak x0 helyen
 - ha a g belsőfüggvény folytonos x0ban és a külsö f függvény is folytonos a g(x0) ban  akkor f(x) kör g folytonos x0 ban.
 - Ha fx egy-egy értelmű függvény folytonos x0ban akkor F(y) inverz függvény is folytonos az y0 helyen
 
