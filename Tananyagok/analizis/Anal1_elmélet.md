@@ -57,7 +57,7 @@ Jele egy áthúzott karika vagy {}
 
 ## Műveletek halmazokkal
 
-## Únió
+### Únió
 
    Az A és B halmaz únióján mind azon elmek halmazát értjük
  amelyek vagy A vagy B vagy mindkét halmaz eleme
@@ -255,6 +255,19 @@ Leképezések osztályozása:
  3. trigonometrikus
  4. ciklometrikus
 
+- Függvények
+ 1. Konstans fx=c
+ 2. Elsőfoku fx=m*x+b
+ 3. Másodfoku fx=x^2
+ 4. Harmadfoku fx=x^3
+ 5. Gyök fx=sqrtf(x)
+ 6. köbGyök fx=sqrtf^3(x) (páratlan, z0)
+ 7. Abszolútérték fx = |x| (páros, z0)
+ 8. lineáris tört fx fx=1/x (páratlan, nincs zérushely)
+ 9. exponenciális fx
+ 10. logaritmus fx = logax
+ 11. sin cos tg ctg
+
 ### Függvények leszűkitése
 
 Legyen az A halmaz az (f) fv Értelmezési Tartományának nem üres részhalmaza az f fv A halmazra való leszűkítése alatt azt az fvt értjük amelynek az ÉTja A és értékkészlete minden x0
@@ -291,11 +304,11 @@ Mivel minden trigonometrikus fgv több-egyértelmű leképezéssel keletkezett e
 
 ### ctg
 
-### fv azonosság
+### Két függvény azonos
 
 f=g -> Df = Dg és f(x) = g(x) minden x eleme Dfnek és a hozzárendelési utasítások megegyeznek
 
-### megadható
+### Egy függvény megadható
 
 - egyenlettel
   1. implicit alak
@@ -305,12 +318,11 @@ f=g -> Df = Dg és f(x) = g(x) minden x eleme Dfnek és a hozzárendelési utas�
 
 ### Függvény konstans szorosa
 
-: Ha f függvény differenciálható x0ban és c tetszőleges valós szám akkor a c*f függvény is differenciálható x0ban és (c*f)'(x0)=c*f'(x0)
-Bizonyítás: feltétel  (differenciahányados)=f'(x0) létezik és véges
+ÉT megegyezik az f(x) ÉTjával és értékkészlete ∀ x0 eleme Dc-f helyen, (cf(x0))=c*F(x0) c eleme R
 
 ### Függvény összege
 
-minden x null  eleme D(f+g)  (f+g)(x0) = f(x0)+g(x0)
+minden x null  eleme D(f+g) helyen (f+g)(x0) = f(x0)+g(x0)
 
 ### Függvények szorzata
 
@@ -354,22 +366,22 @@ olyan hányados függvény amelynek a számlálója és nevezője is egy polinom
 
 ## Számsorozatok
 
-: FOGALMA: Ha ∀ pozitív egész számhoz hozzárendelünk egy-egy valós számot ,szám sorozat kapunk.
+FOGALMA: Ha ∀ pozitív egész számhoz hozzárendelünk egy-egy valós számot ,szám sorozat kapunk.
 
-### megadási módja
+### Megadási módja
 
-: A sorozatoknak vÉgtelen sok eleme van és ezeket különféle módon adhatjuk meg.
+A sorozatoknak vÉgtelen sok eleme van és ezeket különféle módon adhatjuk meg.
 a.A sorozatot megadhatjuk az általános elem képletével, vagyis az n változó függvényeként
 felírt képlettel, formulával. (Pl a n = 2*n)
 b. . A sorozatot megadhatjuk rekurzív módon. Ez azt jelenti, hogy néhány elemet megadunk,
 a további elemeket pedig az előttük lévők segítségével definiáljuk.(Pl a n = a n-1 + a n-2 )
 
-### sorozatok szemléltetése
+### Sorozatok szemléltetése
 
 1. Sikbeli koordinata rendszerben az ( n,a n ) pontokkal
 2. Szám egyenesen csak a sorozat tagjaival.
 
-## *Vizsgálati szempontok*
+## **Vizsgálati szempontok**
 
 ### monotonitás
 
@@ -381,9 +393,15 @@ a további elemeket pedig az előttük lévők segítségével definiáljuk.(Pl 
 
 ### korlátosság
 
+- Egy függvény korlátos ha az adott ha alulról és felülről korlátos vagyis k és K egy olyan szám amire minden n-re k <= an <= K teljesül
+- Korlátosság szempontjából egy sorozat lehet korlátos, vagy nem korlátos
+- *nem korlátos sorozatok*: csak felülről korlátos, csak alulról korlátos és nem korlátos.
+
 ----
 
 ### Határérték
+
+Az an sorozat határ értéke az a valós szám pontosan akkor ha egy tetszőleges epszilon sugarú környezetében a sorozatnak legfejjebb csak véges sok tagja nincs az ]A -epszilon; A +epszilon[ intervallumban.
 
 határ érték szempontjából egy sorozat két fajta lehet, Konvergens vagy divergens.
 
@@ -394,7 +412,7 @@ határ érték szempontjából egy sorozat két fajta lehet, Konvergens vagy div
 ### Konvergens (összetartó) sorozatok
 
 1. Az an sorozat konvergens és határéeréke A szám ha minden epszilon sugaru környzetéből a sorozatnak csak véges számű tagja marad ki.
-2. Az an sorozat konvergens és határéeréke A szám a minden epszilon kissebb mint nulla  számhoz tartozó N(epszilon) küszöbszám vagy küszöb index ha n>N(e) akkor |an-A|<epszilon teljesül Jelölés Lim n tart végtelenig dn = A !KÉP!
+2. Az an sorozat konvergens és határéeréke A szám a minden epszilon kissebb mint nulla  számhoz tartozó N(epszilon) küszöbszám vagy küszöb index ha n>N(e) akkor |an-A|< epszilon teljesül Jelölés Lim n tart végtelenig dn = A !KÉP!
 - Ha egy sorozat konvergens akkor korlátos. **Fordítva nem igaz!** A korlátosság a konvergencia szükséges de nem elégséges feltétele
 - ha egy sorozat korlátos és monoton akkor konvergens. **Fordítva nem igaz!** A korlátosság és a monotonitás a konvergencia elégséges de nem szükséges  feltétele
 
@@ -456,6 +474,9 @@ an
 
 ### differencia hányados
 
+A ρ: Dg\{0} -> R függvény melynek értéke a P(∆ x) = az az a függvény értékének differenciája és a változó X 0
+–hoz tartozó differencia hányadosának nevezzük.
+
 ### differenciál hányados
 
 ### derivált
@@ -467,6 +488,9 @@ an
 ## Differenciálhatóság műveleti tulajdonságai
 
 ### c*f
+
+: Ha f függvény differenciálható x0ban és c tetszőleges valós szám akkor a c*f függvény is differenciálható x0ban és (c*f)'(x0)=c*f'(x0)
+Bizonyítás: feltétel  (differenciahányados)=f'(x0) létezik és véges
 
 ### f+g
 
@@ -495,6 +519,12 @@ an
 ### érintő egyenlete
 
 ### L'hospital[LOPITÁL] szabály
+
+adott f és g  differenciálható (f' és g' létezik)függvény ahol g nem nulla
+
+lim(f/g) 0/0 v. végtelen/végtelen fele tart akkor igaz a következő
+
+lim(f/g) = lim(f'/g')
 
 ----
 

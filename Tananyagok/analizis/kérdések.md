@@ -1,4 +1,4 @@
-#Kérdések
+# Kérdések
 
 ## Halmazok(1)
 
@@ -24,7 +24,7 @@
 - Demoire tétele?
 - Mik azok az egység gyökök és hogyan képezzük őket?
 
-## Függvények
+## Függvények(3)
 
 - Mi az a leképezés?
 - Mik azok a e-e e-t t-e t-t leképezések?
@@ -42,8 +42,7 @@
 - Függvények osztályozása?
 - Ciklometrikus függvények.
 
-
-## Műveletek függvényekkel
+## Műveletek függvényekkel(4)
 
 - Mikor azonos két függvény?
 - Hogyan lehet megadni egy függvényt?(3db)
@@ -58,13 +57,13 @@
 - Inverz függvény?
 - Mik azok a polinomok?
 
-## Számsorozatok
+## Számsorozatok(5)
 
 - Mik azok a Számsorozatok?(fogalom)
 - Hogyan adhatunk meg számsorozatokat?
 - Hogyan szemléltetjük a számsorozatokat?
 
-## Számsorozatok vizsgálati szempontjai
+## Számsorozatok vizsgálati szempontjai(6)
 
 - monotonitás
 - korlátosság
@@ -78,12 +77,12 @@
 - egyváltozós valós függvények határértéke
 - Végtelenben vett határértéke
 
-## Folytonos függvények
+## Folytonos függvények(7)
 
 - Intervallumbeli folytonosság
 - műveletek folytonos függvényekkel
 
-## Deriválás
+## Deriválás(8)
 
 - az érintő
 - differencia hányados
@@ -91,11 +90,11 @@
 - derivált
 - differenciálhatóság és folytonosság kapcsolata
 - Differenciálhatóság műveleti tulajdonságai
-- c*f
-- f+g
-- f*g
-- f/g
-- fkörg
+- (c*f)'(x) = cf'
+- (f+g)'(x) = f' + g'
+- (f * g)'(x) = f'g * g'f
+- (f/g)'(x) = (f'g - g'f)/g^2
+- f kör g = (f' kör g)* g'
 - inverz
 - elemi függvények deriválta
 - algebrai
@@ -106,7 +105,7 @@
 - érintő egyenlete
 - L'hospital[LOPITÁL] szabály
 
-## Függvény vizsgálat
+## Függvény vizsgálat(9)
 
 - szélsőérték és derivált kapcsolata
 - szélsőérték létezésének elégséges feltételei

@@ -53,7 +53,6 @@
 2. Határozza meg az $f(x)=x\cdot e^x$ függvény monotonitási intervallumait és szélsőértékeit!
     - [A példa monotonitási intervalluma](https://www.youtube.com/watch?v=7cwN7Os8tf4) egy másfajta [megoldás](https://www.youtube.com/watch?v=xaLubQigeiA&t=577s)
     - A monotonitás és szélsőértékekre segítség a megoldáshoz [itt](https://www.mateking.hu/analizis-1/fuggvenyvizsgalat-gazdasagi-feladatok/a-fuggvenyvizsgalat-lepesei)
-    
 3. Számítsa ki a következő határértékeket:
     - Figyelni kell mert lehet $\dfrac {0}{0}$ vagy $\dfrac{\infty}{\infty}$ alakú határ érték aminél mindenképpen a L'Hospital szabályt kell alkalmazni.
     - [Online határérték kalkulátor](https://www.symbolab.com/solver/limit-calculator/)
@@ -67,4 +66,5 @@
         - (3+2x^2)^10
         - ((3x^3-4)/(2x^2+2x))^2
         - 3/x^(1/3)
+        - (5x^2)*x^-(1/2)+(7x*x^(1/2))/x^(1/3)
     - s
