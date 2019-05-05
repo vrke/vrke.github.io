@@ -4,88 +4,25 @@
     <title>vrka.github.io</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/index.css" />
+
+    <script>
+        function resizeIframe(obj) {
+          obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+      </script>
 </head>
 <body>
-    <div class="nav-div" id="sticky-top-nav">
-                <ul id="nav-ul">
-                    <li>
-                        <a class="active" href="index.html">vrka.github.io</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Jegyzetek</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Egyéb Infó</a>
-                    </li>
-                </ul>
-            </div>
-        <div class="container">
-            
-			<div class="body-div">
-			<div class="body-main" id="jegyzet-div">            
-                <h1>Jegyzetek</h1>
-                <nav>
-                    <ul class = "nav-ul" id="jegyzet-ul">
-                        <li>
-                            <a href="Tananyagok/Halo2.html">Halo2</a>
-                        </li>
-                        <li>
-                            <a href="Tananyagok/Prog3.html">Prog3.html</a>
-                        </li>
-                        <li>
-                            <a href="Tananyagok/ADATBAZISOK.html">ADATB</a>
-                        </li>
-                        <li>
-                            <a href="https://docs.google.com/document/d/e/2PACX-1vTvzTnpsUcQFtQ-rWnEZ2bsZ_sb4YyME3ESFHKTuDfAI-7AqLftGM1Low-7mAXeqRoHvEeNzVZAQIMG/pub?embedded=true">Új Adatb</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-               
-		</div>	
-        </div>
-
 			
-	 <div class="wrapper"> 
+	
         
-  <iframe src="https://docs.google.com/document/d/e/2PACX-1vTvzTnpsUcQFtQ-rWnEZ2bsZ_sb4YyME3ESFHKTuDfAI-7AqLftGM1Low-7mAXeqRoHvEeNzVZAQIMG/pub?embedded=true"></iframe>		
-    </div>
+  <iframe   id="gd-import" 
+     
+           
+            onload="resizeIframe(this)" 
+          
+            src="https://docs.google.com/document/d/e/2PACX-1vTvzTnpsUcQFtQ-rWnEZ2bsZ_sb4YyME3ESFHKTuDfAI-7AqLftGM1Low-7mAXeqRoHvEeNzVZAQIMG/pub?embedded=true"></iframe>		
+   
 
-        <script>
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("sticky-top-nav");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
-    <script type="text/javascript">
-
-function pagebar()
-{
-	var links=document.getElementById('navbar').getElementsByTagName("a");
-	var current = location.href;
-
-	for (var i=0; i < links.length; i++)
-	{
-		if(links[i].href == current) 
-		{
-			links[i].href = "";
-			links[i].className='grayStyle';
-		}
-	}
-}
-
-window.onload = pagebar;
-
-</script>
 
 </body>
-
 </html>

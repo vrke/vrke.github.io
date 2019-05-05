@@ -424,17 +424,32 @@ Tágabbb értelemben van határértékük:
 
 ### Nevezetes határértékek
 
-lim n-végtelen 1/n = 0
-lim n-végtelen q^n 0ha |q|<1 1ha q=1  egyébként divergens -> végtelen q>1 korlátos q=-1 széttartó divergens q<-1
-lim n-végtelen (1+(1/n))^n = e -> általánosan (1+(k/n)) = e^k és ő konvergens
-lim n-végtelen n gyök alatt a = 1  a eleme R+
+- $\lim_{n\to\infty} {1\over n}= 0$
+- $\lim_{n\to\infty} q^n$ 
+  - = 0 ha |q|<1 
+  - = 1 ha q=1  
+  - egyébként divergens -> végtelen 
+    - = q > 1 korlátos 
+    - = q = -1 széttartó divergens 
+    - = q < -1 korlátos
+- $\lim_{n\to\infty} (1+{1\over n})^n = e$ 
+- az előző általánosan $\lim_{n\to\infty} (1+{k\over n})^n = e^k$ ő konvergens
+- $\lim_{n\to\infty} \sqrt[n]{a} = 1$ a eleme R+
 
-### Függvények határéerékének műveleti tulajdonságai
+### Függvények határértékének műveleti tulajdonságai
 
 ## konvergens sorozatok műveleti tulajdonságai
 
+- legyen an és bn sorozat konvergens és c tetszőleges valós szám
+- (an+bn)= an+bn
+- (an-bn)= an-bn
+- (an\*bn)= an\*bn
+- (an/bn)= an/bn  
+- (c*an)=c*(an)
+
 ### Rendőrszabály
 
+$\lim_{n\to\infty} {a_n}= 0$
 limn→∞
 an
 : ha az an sorozat konvergens és határértéke A szám a bn sorozat konvergens és határértéke a szám minden nre ihaz hogy an<=cn<=bn akkor cn sorozat is konvergens és határértéke A szám
@@ -444,6 +459,8 @@ an
 ### Végtelenben vett határértéke
 
 ### függvények határértékének műveleti tuzlajdonságai
+
+Ha az x0 valamely környezetében értelmezett f és g függvénnek van határértéke az x0 helyen és c  akkor 
 
 ### Függvények folytonossága
 
@@ -520,7 +537,7 @@ Bizonyítás: feltétel  (differenciahányados)=f'(x0) létezik és véges
 
 ### L'hospital[LOPITÁL] szabály
 
-adott f és g  differenciálható (f' és g' létezik)függvény ahol g nem nulla
+Adott f és g  differenciálható (f' és g' létezik)függvény ahol g nem nulla
 
 lim(f/g) 0/0 v. végtelen/végtelen fele tart akkor igaz a következő
 

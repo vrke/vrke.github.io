@@ -92,8 +92,8 @@
 - Differenciálhatóság műveleti tulajdonságai
 - (c*f)'(x) = cf'
 - (f+g)'(x) = f' + g'
-- (f * g)'(x) = f'g * g'f
-- (f/g)'(x) = (f'g - g'f)/g^2
+- (f \* g)'(x) = f'g \* g'f
+- (f / g)'(x) = (f'g - g'f) / g^2
 - f kör g = (f' kör g)* g'
 - inverz
 - elemi függvények deriválta
@@ -110,3 +110,4 @@
 - szélsőérték és derivált kapcsolata
 - szélsőérték létezésének elégséges feltételei
 - szélsőérték létezésének szükséges feltétele
+- határozza meg a függvény monotonitási intervallumait és szélsőértékét

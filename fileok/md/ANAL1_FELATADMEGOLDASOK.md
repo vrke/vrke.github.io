@@ -6,11 +6,10 @@
   - Megoldás lépések
   - Megjegyzések
 - Segítségek
-  - Matek : [Mateking](https://www.mateking.hu) jó forrás gyakorláshoz
+  - [Mateking](https://www.mateking.hu) jó forrás gyakorláshoz
     - [Differenciálhatóság (Mateking)](https://www.mateking.hu/system/files/docs/differencialhatosag.pdf)
-  - Dokumentum
-    - [Katex syntax](https://khan.github.io/KaTeX/function-support.html)
-    - [MarkDown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  - [Katex syntax](https://khan.github.io/KaTeX/function-support.html)
+  - [MarkDown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - Egyéb
   - Használt program és extension: Visual Studio Code
     - markdownlint  0.18.0 (stílus figyelő plugin hogy ne legyen kankeres a dokumentum annyira)
@@ -21,6 +20,7 @@
 
 1. $\dfrac{1}{x} = x^{-1}$
 2. $\sqrt {x} = x^{\frac{1}{2}}$
+3. $1\over \sqrt{x}$ =$x^{-\frac{1}{2}}$
 
 ## Szabályok
 
@@ -54,17 +54,28 @@
     - [A példa monotonitási intervalluma](https://www.youtube.com/watch?v=7cwN7Os8tf4) egy másfajta [megoldás](https://www.youtube.com/watch?v=xaLubQigeiA&t=577s)
     - A monotonitás és szélsőértékekre segítség a megoldáshoz [itt](https://www.mateking.hu/analizis-1/fuggvenyvizsgalat-gazdasagi-feladatok/a-fuggvenyvizsgalat-lepesei)
 3. Számítsa ki a következő határértékeket:
-    - Figyelni kell mert lehet $\dfrac {0}{0}$ vagy $\dfrac{\infty}{\infty}$ alakú határ érték aminél mindenképpen a L'Hospital szabályt kell alkalmazni.
-    - [Online határérték kalkulátor](https://www.symbolab.com/solver/limit-calculator/)
-        - $\lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)$ \lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)
-        - $\lim _{x\to 2}\left(3x+4\right)^4$ \lim _{x\to 2}\left(3x+4\right)^4
+    - szorzattá alakítás (0/0 vagy c/0 esetben a nullás tagot)
+    - 
+    - ${c\over \infty}=0$ hoz tart és $(-){\infty\over c }=(-)\infty$hez tart
+    - Figyelni kell mert lehet $\dfrac {0}{0}$ vagy $\dfrac{\infty}{\infty}$ alakú határ érték aminél lehetőségünk van arra hogy a L'Hospital szabályt  alkalmazuk.
+    - [Online határérték kalkulátor](https://www.symbolab.com/solver/limit-calculator/) beillesztheted leellenőrzésre
+        - $\lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)$ `\lim _{x\to -1\:}\left(\frac{3x-1}{x^2+2x+1}\right)`
+        - $\lim _{x\to 2}\left(3x+4\right)^4$ `\lim _{x\to 2}\left(3x+4\right)^4`
+        -  $\lim _{x\to \:0}\left(\frac{\sqrt{4+x}-2}{x}\right)$ `\lim _{x\to \infty }^{\:}\:x^2\cdot \:e^{-3x}`
+        - $\lim _{x\to \infty }^{\:}\:x^2\cdot \:e^{-3x}$ `\lim _{x\to \infty }^{\:}\:x^2\cdot \:e^{-3x}`
         - .
-4. Deriválja az alábbi függvényeket:
+        - .
+        - .
+        - .
+3. hol folytonosak az alábbi függvények
+4. mi a deriváltja/érintője/differenciálhányadosa az alábbi fvnek
+5. Deriválja az alábbi függvényeket:
     - [Derivált kalkulátor](https://www.derivative-calculator.net/)
         - (5log_3 x- root(3,x))/3^x
         - 3/root(3,x)-5/root(5,x^3)
         - (3+2x^2)^10
         - ((3x^3-4)/(2x^2+2x))^2
         - 3/x^(1/3)
-        - (5x^2)*x^-(1/2)+(7x*x^(1/2))/x^(1/3)
+        - (5x^2)\*x^-(1/2)+(7x\
+        *x^(1/2))/x^(1/3)
     - s
